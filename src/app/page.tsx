@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Calendar, Globe, HomeIcon, Mail, Phone } from 'lucide-react'
+import { Calendar, Globe, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { ReactNode } from 'react'
 
@@ -66,6 +66,17 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   github.com/devshahoriar
+                </a>
+              </div>
+              <div className="flex gap-4 items-center">
+                <Linkedin />
+                <a
+                  className="hover:underline"
+                  href="https://www.linkedin.com/in/devshahoriar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                linkedin.com/in/devshahoriar
                 </a>
               </div>
             </div>
@@ -192,7 +203,7 @@ export default function Home() {
               </h2>
               <p className="font-light">Varendra University,Rajshahi</p>
               <p className="font-light">
-                Final Project: Full stack Gim Management system
+                Final Project: Full stack Gym Management system
               </p>
             </TitleWithDescription>
           </div>
