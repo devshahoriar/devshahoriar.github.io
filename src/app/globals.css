@@ -67,3 +67,8 @@ body{
 body {
   @apply bg-background text-foreground;
 }
+
+@media print {
+  @page { margin: 0 }
+  body { margin: 0 }
+}

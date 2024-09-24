@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
     "babel-plugin-react-compiler": "0.0.0-experimental-de2cfda-20240912",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -18,7 +19,8 @@
     "react": "19.0.0-rc-206df66e-20240912",
     "react-dom": "19.0.0-rc-206df66e-20240912",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
