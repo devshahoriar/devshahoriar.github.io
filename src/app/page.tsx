@@ -4,12 +4,12 @@ import { cn } from '@/lib/utils'
 import { ReactNode } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/shadcn/button'
-import { PritButton } from '@/components/pages/homePageClient'
+import { ModeToggle, PritButton } from '@/components/pages/homePageClient'
 
 export default function Home() {
   return (
     <>
-      <div className="flex justify-between w-[1120px] mx-auto items-center print:hidden">
+      <div className="flex justify-between w-[1020px] mx-auto items-center print:hidden">
         <div>
           <h1 className="text-center text-2xl font-semibold mt-5">
             Shahorair Ahmed
@@ -20,6 +20,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex items-center gap-3">
+          <ModeToggle />
           <PritButton />
           <Button asChild variant="outline">
             <Link href="/blog">Blog</Link>
@@ -27,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="mx-auto wss-[950px] flex border my-5 print:my-0 h-[1320px] w-[1020px]">
+      <section className="mx-auto flex border my-5 print:my-0 h-[1320px] w-[1020px]">
         {/* // cv sidebar */}
         <aside className="w-[350px] bg-[#3E3E3E] pb-10 bg-opacity-15 dark:bg-opacity-100">
           <div className="mx-4 mt-8">

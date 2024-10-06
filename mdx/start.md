@@ -1,10 +1,8 @@
 ---
 title: Defining Routes
 description: Learn how to create your first route in Next.js.
-related:
-  description: Learn more about creating pages and layouts.
-  links:
-    - app/building-your-application/routing/pages
+coverImage: https://github.com/devshahoriar.png
+tags: Nextjs,Mdx
 ---
 
 > We recommend reading the [Routing Fundamentals](/docs/app/building-your-application/routing) page before continuing.
@@ -19,8 +17,7 @@ Each folder represents a [**route** segment](/docs/app/building-your-application
 
 <Image
   alt="Route segments to path segments"
-  srcLight="/docs/light/route-segments-to-path-segments.png"
-  srcDark="/docs/dark/route-segments-to-path-segments.png"
+  src="https://github.com/devshahoriar.png"
   width="1600"
   height="594"
 />
@@ -29,8 +26,7 @@ A special [`page.js` file](/docs/app/building-your-application/routing/pages) is
 
 <Image
   alt="Defining Routes"
-  srcLight="/docs/light/defining-routes.png"
-  srcDark="/docs/dark/defining-routes.png"
+  src='https://github.com/devshahoriar.png'
   width="1600"
   height="687"
 />
