@@ -29,7 +29,9 @@ const ItemBlogPage = async ({
       <div>
         <Image height={500} width={500} alt='post cover' src={fontMatter.coverImage}/>
       </div>
+      <div className='prose dark:prose-invert'>
       <MDX {...mdxSource} components={components} />
+      </div>
     </section>
   )
 }
