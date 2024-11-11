@@ -9,7 +9,7 @@ import { ModeToggle, PritButton } from '@/components/pages/homePageClient'
 export default function Home() {
   return (
     <>
-      <div className="flex justify-between w-[1020px] mx-auto items-center print:hidden">
+      <div className="flex justify-between md:w-[1020px] mx-auto items-center print:hidden w-full">
         <div>
           <h1 className="text-center text-2xl font-semibold mt-5">
             Shahorair Ahmed

@@ -15,7 +15,7 @@ Next.js uses a file-system based router where **folders** are used to define rou
 
 Each folder represents a [**route** segment](/docs/app/building-your-application/routing#route-segments) that maps to a **URL** segment. To create a [nested route](/docs/app/building-your-application/routing#nested-routes), you can nest folders inside each other.
 
-<Image
+<img
   alt="Route segments to path segments"
   src="https://github.com/devshahoriar.png"
   width="1600"

@@ -4,6 +4,9 @@
 import { LaptopMinimal, Moon, Printer, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '../shadcn/button'
+import { MDXRemote } from 'next-mdx-remote'
+import { useRef } from 'react'
+import { toast } from 'sonner'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -62,11 +65,37 @@ export const ModeToggle = () => {
   )
 }
 
-import { MDXRemote } from 'next-mdx-remote'
-export const MDX = (s:any) => {
-  return <MDXRemote {...s}/>
+
+export const MDX = (s: any) => {
+  return <MDXRemote {...s} />
 }
 
-export const H = (props:any)=> <h1 {...props} className="text-2xl font-bold">{props.children}</h1>
-export const Pre = (props:any)=> <pre {...props} className="overflow-x-auto w-fit">{props.children}</pre>
-export const Code = (props:any)=> <code {...props} className="text-sm font-mono">{props.children}</code>
+export const H = (props: any) => (
+  <h1 {...props} className="text-2xl font-medium">
+    {props.children}
+  </h1>
+)
+export const Pre = (props: any) => (
+  <pre {...props} className="overflow-x-auto w-fit">
+    {props.children}
+  </pre>
+)
+export const Code = (props: any) => {
+  const ref = useRef<HTMLDivElement>(null)
+
+  return (
+    <>
+      <code
+        onClick={() => {
+          navigator.clipboard.writeText(ref?.current?.textContent as string)
+          toast('Code copied to clipboard')
+        }}
+        ref={ref}
+        {...props}
+        className="text-sm font-mono cursor-pointer"
+      >
+        {props.children}
+      </code>
+    </>
+  )
+}

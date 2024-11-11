@@ -3,6 +3,7 @@ import { Button } from "@/components/shadcn/button"
 import { Home } from "lucide-react"
 import Link from "next/link"
 import { ReactNode } from "react"
+import { Toaster } from "@/components/shadcn/sonner"
 
 const layout = ({children}:{children:ReactNode}) => {
   return (
@@ -24,6 +25,7 @@ const layout = ({children}:{children:ReactNode}) => {
         </div>
       </div>
     {children}
+    <Toaster />
     </>
   )
 }
