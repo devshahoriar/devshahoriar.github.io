@@ -12,7 +12,7 @@ export default function Home() {
       <div className="flex justify-between md:w-[1020px] mx-auto items-center print:hidden w-full">
         <div>
           <h1 className="text-center text-2xl font-semibold mt-5">
-            Shahorair Ahmed
+            Shahoriar Ahmed
           </h1>
           <p className="text-center text-[14px] font-light">
             Full stack web developer
@@ -43,7 +43,7 @@ export default function Home() {
             </div>
             <div className="mt-5">
               <h1 className="text-center text-2xl font-semibold">
-                Shahorair Ahmed
+                Shahoriar Ahmed
               </h1>
               <p className="text-center mt-4 text-[15px]">
                 Full stack web developer

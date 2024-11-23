@@ -71,7 +71,7 @@ const BlogItem = ({
   return (
     <div className="flex-[0_0_100%] sm:flex-[0_0_calc(50%-25px)] lg:flex-[0_0_calc(33.33333%-25px)]">
       <Image
-        alt="devshahorair shahorair"
+        alt="devshahora Shahoriar"
         className="aspect-video object-cover object-top w-full"
         height={500}
         width={500}

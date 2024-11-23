@@ -11,7 +11,7 @@ const layout = ({children}:{children:ReactNode}) => {
     <div className="flex justify-between container items-center print:hidden my-5">
         <div className="flex items-center md:flex-col">
           <Link href='/'><h1 className="md:text-center text-xl md:text-2xl font-semibold">
-            @devshahorair
+            @devshahoriar
           </h1></Link>
         </div>
         <div className="flex items-center gap-3">

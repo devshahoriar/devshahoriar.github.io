@@ -10,9 +10,9 @@ const popins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://devshahoriar.vercel.app'),
-  title: 'Devshahorair | Full-Stack Web Developer',
+  title: 'Devshahoriar | Full-Stack Web Developer',
   description:
-    'I am Shahorair Ahmed, Passionate and dedicated Full-Stack Web Developer with a robust skill set that ensures a seamless and efficient web development process from start to finish. #nextjs #nodejs #reactjs #tailwindcss',
+    'I am Shahoriar Ahmed, Passionate and dedicated Full-Stack Web Developer with a robust skill set that ensures a seamless and efficient web development process from start to finish. #nextjs #nodejs #reactjs #tailwindcss',
 }
 
 export default function RootLayout({
