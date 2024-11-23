@@ -7,10 +7,11 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const generateMetadata = async ({
-  params: { fileName },
+  params
 }: {
-  params: { fileName: string }
+  params: Promise<{ fileName: string }>
 }): Promise<Metadata> => {
+  const { fileName } = await params
   const name = decodeURIComponent(fileName) + '.md'
   const { fontMatter } = await getFilenfo(name)
   return {
