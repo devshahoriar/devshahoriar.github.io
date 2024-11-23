@@ -28,10 +28,11 @@ export const generateMetadata = async ({
 }
 
 const ItemBlogPage = async ({
-  params: { fileName },
+  params
 }: {
-  params: { fileName: string }
+  params: Promise<{ fileName: string }>
 }) => {
+  const { fileName } = await params
   const name = decodeURIComponent(fileName) + '.md'
   const { fontMatter, headings, mdxSource } = await getFilenfo(name)
 
