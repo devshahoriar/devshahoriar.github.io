@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import { LaptopMinimal, Moon, Printer, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { Button } from '../shadcn/button'
+import { BookUser, LaptopMinimal, Moon, Sun } from 'lucide-react'
 import { MDXRemote } from 'next-mdx-remote'
-import { useRef } from 'react'
+import { useTheme } from 'next-themes'
+import Link from 'next/link'
+import { ReactNode, useRef } from 'react'
 import { toast } from 'sonner'
+import { Button } from '../shadcn/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,14 +15,170 @@ import {
   DropdownMenuTrigger,
 } from '../shadcn/dropdown-menu'
 
-export const PritButton = () => {
-  const _hendelPrint = () => {
-    window.print()
-  }
+export const CV = () => (
+  <div className="flex-1 dark:bg-[#1a1a1a]">
+    <div className="mx-4 mt-12">
+      <div>
+        <TitleWithButtomBar title="Education" />
+
+        <TitleWithDescription title="2021-Now">
+          <h2 className="font-bold">
+            B.Sc in Computer Science and Engineering
+          </h2>
+          <p className="font-light">Varendra University,Rajshahi</p>
+          <p className="font-light">
+            Final Project: Full stack Gym Management system
+          </p>
+        </TitleWithDescription>
+      </div>
+
+      <div className="mt-10">
+        <TitleWithButtomBar title="Experience" />
+        <TitleWithDescription title="2021-2023">
+          <h2 className="font-bold">
+            Front end developer at Xemiron IT Solutions
+          </h2>
+          <p className="font-light">Vodra, Rajshahi</p>
+        </TitleWithDescription>
+
+        <TitleWithDescription title="2023-Now">
+          <h2 className="font-bold">
+            Junior full stack developer at Global Community Organization
+          </h2>
+          <p className="font-light">Bagha, Rajshahi</p>
+        </TitleWithDescription>
+      </div>
+
+      <div className="mt-10">
+        <TitleWithButtomBar title="Courses" />
+        <TitleWithDescription title="2022">
+          <h2 className="font-bold">Think in a Redux way Course</h2>
+          <p className="font-light">React Redux,Redux toolkit</p>
+          <p className="font-light">
+            89.29% marks obtained -{' '}
+            <a
+              target="_blank"
+              className="underline"
+              href="https://learnwithsumit.com/certificates/verify/LWSCTXN-VWWQ9WRM"
+            >
+              Report
+            </a>
+          </p>
+        </TitleWithDescription>
+        <TitleWithDescription title="2022">
+          <h2 className="font-bold">Reactive Accelerator</h2>
+          <p className="font-light">React Advanced, Next js, Mongo db</p>
+          <p className="font-light">
+            85.15% marks obtained -{' '}
+            <a
+              target="_blank"
+              className="underline"
+              href="https://learnwithsumit.com/certificates/verify/LWSCTXN-H6Z6UACJ"
+            >
+              Report
+            </a>
+          </p>
+        </TitleWithDescription>
+      </div>
+
+      <div className="mt-10">
+        <TitleWithButtomBar title="A few word about myself" />
+        <p className="mt-5 text-justify">
+          I am a self-taught passionate{' '}
+          <span className="font-bold">full-stack</span> web developer
+          specializing in <span className="font-bold">MERN</span> stack, as a
+          full-stack developer. I can develop scalable{' '}
+          <span className="font-bold">Nodejs</span>,{' '}
+          <span className="font-bold">ExpressJs</span> &{' '}
+          <span className="font-bold">MongoDB</span>,{' '}
+          <span className="font-bold">MySql</span>, and{' '}
+          <span className="font-bold">Postgres</span>
+          API that connect with Responsive{' '}
+          <span className="font-bold">ReactJs</span> frontend and{' '}
+          <span className="font-bold">NextJs</span>
+          full-stack framework. I have a comprehensive knowledge of
+          IOT(RaspberyPi, Nodemcu). Currently learning{' '}
+          <span className="font-bold">Go</span> Lang and{' '}
+          <span className="font-bold">Vector </span>
+          Database.
+        </p>
+      </div>
+
+      <div className="mt-10">
+        <TitleWithButtomBar title="Projects" />
+        <div className="mt-5">
+          <h2 className="font-semibold">Full stack E-Commerce app </h2>
+          <p className="font-light">
+            Technologies: NextJs 14 app directory, Mongodb, Tailwindcss
+          </p>
+          <p className="font-light">
+            Challenges: SEO optimization, Image optimization & placeholder
+          </p>
+          <div className="flex items-center mt-4 gap-3">
+            <a
+              target="_blank"
+              className="underline"
+              href="https://lws-final-rnext.vercel.app/"
+            >
+              Live
+            </a>
+            <p>-</p>
+            <a
+              target="_blank"
+              className="underline"
+              href="https://github.com/devshahoriar/lwsFinalRnext"
+            >
+              Source Code
+            </a>
+          </div>
+          <p className="mt-5">
+            Lot of interesting project are keep in{' '}
+            <a
+              className="underline"
+              href="https://github.com/devshahoriar?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+)
+
+const TitleWithDescription = ({
+  children,
+  title,
+}: {
+  title: string
+  children: ReactNode
+}) => {
   return (
-    <Button className="flex gap-1 items-center" onClick={_hendelPrint}>
-      Print
-      <Printer size={16} />
+    <div className="mt-5 flex justify-between">
+      <p className="font-medium">{title}</p>
+      <div className="w-[350px]">{children}</div>
+    </div>
+  )
+}
+
+const TitleWithButtomBar = ({ title }: { title: string }) => {
+  return (
+    <div>
+      <p className="font-semibold text-xl">{title}</p>
+      <div className="bg-slate-500 h-[3px]" />
+    </div>
+  )
+}
+
+export const PritButton = () => {
+  return (
+    <Button asChild>
+      <Link href={'/api/resume'} className="flex gap-1 items-center">
+        Resume
+        <BookUser />
+      </Link>
     </Button>
   )
 }
@@ -38,7 +195,7 @@ export const ModeToggle = () => {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent>
         <DropdownMenuItem
           className="flex gap-1 items-center"
           onClick={() => setTheme('light')}
@@ -64,7 +221,6 @@ export const ModeToggle = () => {
     </DropdownMenu>
   )
 }
-
 
 export const MDX = (s: any) => {
   return <MDXRemote {...s} />

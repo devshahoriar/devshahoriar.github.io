@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
       <meta name="googlebot-news" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
       </head>
       <body className={`antialiased ${popins.className}`}>

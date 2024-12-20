@@ -1,16 +1,24 @@
-import Image from 'next/image'
-import { Calendar, Globe, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { ReactNode } from 'react'
-import Link from 'next/link'
+import { CV, ModeToggle, PritButton } from '@/components/pages/homePageClient'
 import { Button } from '@/components/shadcn/button'
-import { ModeToggle, PritButton } from '@/components/pages/homePageClient'
+import { cn } from '@/lib/utils'
+import { Calendar, Github, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
-      <div className="flex justify-between md:w-[1020px] mx-auto items-center print:hidden w-full">
+      <div className="flex justify-center  items-center print:hidden">
         <div>
+          <div className="flex justify-center mt-10 print:hidden md:hidden">
+            <Image
+              alt="profile"
+              src={'https://github.com/devshahoriar.png'}
+              height={500}
+              width={500}
+              className="size-60 object-cover rounded-full"
+            />
+          </div>
           <h1 className="text-center text-2xl font-semibold mt-5">
             Shahoriar Ahmed
           </h1>
@@ -18,17 +26,42 @@ export default function Home() {
             Full stack web developer
             <br /> specialized in MERN stack
           </p>
-        </div>
-        <div className="flex items-center gap-3">
-          <ModeToggle />
-          <PritButton />
-          <Button asChild variant="outline">
-            <Link href="/blog">Blog</Link>
-          </Button>
+          <div className="space-y-1 mt-4 md:hidden print:hidden">
+            <div className="flex items-center gap-4 justify-center">
+              <Mail size={14} />
+              <a className="hover:underline" href="mailto:shuvo1556@gmail.com">
+                shuvo1556@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-4 justify-center">
+              <Phone size={14} />
+              <a className="hover:underline" href="tel:+8801777596337">
+                +8801777596337
+              </a>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Github size={14} />
+              <a
+                className="hover:underline"
+                href="https://github.com/devshahoriar"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/devshahoriar
+              </a>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 mt-3">
+            <ModeToggle />
+            <PritButton />
+            <Button asChild variant="outline">
+              <Link href="/blog">Blogs</Link>
+            </Button>
+          </div>
         </div>
       </div>
 
-      <section className="mx-auto flex border my-5 print:my-0 h-[1320px] w-[1020px]">
+      <section className="mx-auto md:flex border my-5 print:my-0 h-[1320px] w-[1020px] hidden print:flex">
         {/* // cv sidebar */}
         <aside className="w-[350px] bg-[#3E3E3E] pb-10 bg-opacity-15 dark:bg-opacity-100">
           <div className="mx-4 mt-8">
@@ -55,7 +88,7 @@ export default function Home() {
               <TitleWithBar title="Contact" />
               <div className="flex flex-col gap-5 mt-5 mx-2">
                 <div className="flex items-center gap-4">
-                  <Mail />
+                  <Mail size={16} />
                   <a
                     className="hover:underline"
                     href="mailto:shuvo1556@gmail.com"
@@ -64,24 +97,24 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Phone />{' '}
+                  <Phone size={16} />
                   <a className="hover:underline" href="tel:+8801777596337">
                     +8801777596337
                   </a>
                 </div>
                 <div className="flex gap-4">
-                  <HomeIcon />
+                  <HomeIcon size={16} />
                   <p>
                     Bagha, Rajshahi <br />
                     Bangladesh
                   </p>
                 </div>
                 <div className="flex gap-4 items-center">
-                  <Calendar />
+                  <Calendar size={16} />
                   <p>14-dec 1999</p>
                 </div>
                 <div className="flex gap-4 items-center">
-                  <Globe />
+                  <Github size={16} />
                   <a
                     className="hover:underline"
                     href="https://github.com/devshahoriar"
@@ -92,7 +125,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="flex gap-4 items-center">
-                  <Linkedin />
+                  <Linkedin size={16} />
                   <a
                     className="hover:underline"
                     href="https://www.linkedin.com/in/devshahoriar/"
@@ -215,162 +248,9 @@ export default function Home() {
         </aside>
 
         {/* //cv description */}
-        <div className="flex-1 dark:bg-[#1a1a1a]">
-          <div className="mx-4 mt-12">
-            <div>
-              <TitleWithButtomBar title="Education" />
-
-              <TitleWithDescription title="2021-Now">
-                <h2 className="font-bold">
-                  B.Sc in Computer Science and Engineering
-                </h2>
-                <p className="font-light">Varendra University,Rajshahi</p>
-                <p className="font-light">
-                  Final Project: Full stack Gym Management system
-                </p>
-              </TitleWithDescription>
-            </div>
-
-            <div className="mt-10">
-              <TitleWithButtomBar title="Experience" />
-              <TitleWithDescription title="2021-2023">
-                <h2 className="font-bold">
-                  Front end developer at Xemiron IT Solutions
-                </h2>
-                <p className="font-light">Vodra, Rajshahi</p>
-              </TitleWithDescription>
-
-              <TitleWithDescription title="2023-Now">
-                <h2 className="font-bold">
-                  Junior full stack developer at Global Community Organization
-                </h2>
-                <p className="font-light">Bagha, Rajshahi</p>
-              </TitleWithDescription>
-            </div>
-
-            <div className="mt-10">
-              <TitleWithButtomBar title="Courses" />
-              <TitleWithDescription title="2022">
-                <h2 className="font-bold">Think in a Redux way Course</h2>
-                <p className="font-light">React Redux,Redux toolkit</p>
-                <p className="font-light">
-                  89.29% marks obtained -{' '}
-                  <a
-                    target="_blank"
-                    className="underline"
-                    href="https://learnwithsumit.com/certificates/verify/LWSCTXN-VWWQ9WRM"
-                  >
-                    Report
-                  </a>
-                </p>
-              </TitleWithDescription>
-              <TitleWithDescription title="2022">
-                <h2 className="font-bold">Reactive Accelerator</h2>
-                <p className="font-light">React Advanced, Next js, Mongo db</p>
-                <p className="font-light">
-                  85.15% marks obtained -{' '}
-                  <a
-                    target="_blank"
-                    className="underline"
-                    href="https://learnwithsumit.com/certificates/verify/LWSCTXN-H6Z6UACJ"
-                  >
-                    Report
-                  </a>
-                </p>
-              </TitleWithDescription>
-            </div>
-
-            <div className="mt-10">
-              <TitleWithButtomBar title="A few word about myself" />
-              <p className="mt-5 text-justify">
-                I am a self-taught passionate{' '}
-                <span className="font-bold">full-stack</span> web developer
-                specializing in <span className="font-bold">MERN</span> stack,
-                as a full-stack developer. I can develop scalable{' '}
-                <span className="font-bold">Nodejs</span>,{' '}
-                <span className="font-bold">ExpressJs</span> &{' '}
-                <span className="font-bold">MongoDB</span>,{' '}
-                <span className="font-bold">MySql</span>, and{' '}
-                <span className="font-bold">Postgres</span>
-                API that connect with Responsive{' '}
-                <span className="font-bold">ReactJs</span> frontend and{' '}
-                <span className="font-bold">NextJs</span>
-                full-stack framework. I have a comprehensive knowledge of
-                IOT(RaspberyPi, Nodemcu). Currently learning{' '}
-                <span className="font-bold">Go</span> Lang and{' '}
-                <span className="font-bold">Vector </span>
-                Database.
-              </p>
-            </div>
-
-            <div className="mt-10">
-              <TitleWithButtomBar title="Projects" />
-              <div className="mt-5">
-                <h2 className="font-semibold">Full stack E-Commerce app </h2>
-                <p className="font-light">
-                  Technologies: NextJs 14 app directory, Mongodb, Tailwindcss
-                </p>
-                <p className="font-light">
-                  Challenges: SEO optimization, Image optimization & placeholder
-                </p>
-                <div className="flex items-center mt-4 gap-3">
-                  <a
-                    target="_blank"
-                    className="underline"
-                    href="https://lws-final-rnext.vercel.app/"
-                  >
-                    Live
-                  </a>
-                  <p>-</p>
-                  <a
-                    target="_blank"
-                    className="underline"
-                    href="https://github.com/devshahoriar/lwsFinalRnext"
-                  >
-                    Source Code
-                  </a>
-                </div>
-                <p className="mt-5">
-                  Lot of interesting project are keep in{' '}
-                  <a
-                    className="underline"
-                    href="https://github.com/devshahoriar?tab=repositories"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Github
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CV />
       </section>
     </>
-  )
-}
-
-const TitleWithDescription = ({
-  children,
-  title,
-}: {
-  title: string
-  children: ReactNode
-}) => {
-  return (
-    <div className="mt-5 flex justify-between">
-      <p className="font-medium">{title}</p>
-      <div className="w-[350px]">{children}</div>
-    </div>
-  )
-}
-
-const TitleWithButtomBar = ({ title }: { title: string }) => {
-  return (
-    <div>
-      <p className="font-semibold text-xl">{title}</p>
-      <div className="bg-slate-500 h-[3px]" />
-    </div>
   )
 }
 
