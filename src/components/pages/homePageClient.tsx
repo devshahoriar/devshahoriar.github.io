@@ -174,10 +174,12 @@ const TitleWithButtomBar = ({ title }: { title: string }) => {
 
 export const PritButton = () => {
   return (
-    <Button asChild>
+    <Button asChild 
+    variant={'outline'}
+     size={'sm'}>
       <Link href={'/api/resume'} className="flex gap-1 items-center">
         Resume
-        <BookUser />
+        <BookUser size={16} />
       </Link>
     </Button>
   )
@@ -190,8 +192,8 @@ export const ModeToggle = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <Sun size={16} className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon size={16} className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
@@ -200,21 +202,21 @@ export const ModeToggle = () => {
           className="flex gap-1 items-center"
           onClick={() => setTheme('light')}
         >
-          <Sun size={19} />
+          <Sun size={16} />
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
           className="flex gap-1 items-center"
           onClick={() => setTheme('dark')}
         >
-          <Moon size={19} />
+          <Moon size={16} />
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
           className="flex gap-1 items-center"
           onClick={() => setTheme('system')}
         >
-          <LaptopMinimal size={19} />
+          <LaptopMinimal size={16} />
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

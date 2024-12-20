@@ -1,32 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import path from 'path'
-import { promises as fs } from 'fs'
-import { mdxToData } from '@/lib/utils'
 import { Code, H, MDX, Pre } from '@/components/pages/homePageClient'
-import Image from 'next/image'
+import { mdxToData } from '@/lib/utils'
+import { promises as fs } from 'fs'
 import { Metadata } from 'next'
+import Image from 'next/image'
+import path from 'path'
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: Promise<{ fileName: string }>
-}): Promise<Metadata> => {
-  const { fileName } = await params
-  const name = decodeURIComponent(fileName) + '.md'
-  const { fontMatter } = await getFilenfo(name)
-  return {
-    title: fontMatter.title,
-    description: fontMatter.description,
-    openGraph: {
-      images: [
-        {
-          url: fontMatter.coverImage,
-          alt: fontMatter.title,
-        },
-      ],
-    },
-  } as Metadata
-}
 
 const ItemBlogPage = async ({
   params,
@@ -52,7 +31,7 @@ const ItemBlogPage = async ({
           alt="post cover"
           src={fontMatter.coverImage}
         />
-        <div className="container flex gap-3 flex-col md:flex-row justify-center border-b pb-10">
+        <div className="flex gap-3 flex-col md:flex-row justify-center border-b pb-10 mt-10">
           <Image
             className="aspect-square object-cover size-[200px]"
             height={500}
@@ -81,7 +60,7 @@ const ItemBlogPage = async ({
         </div>
       </div>
 
-      <section className="container mt-10">
+      <section className="container my-10">
         <div className="prose dark:prose-invert max-w-[700px] mx-auto">
           <MDX {...mdxSource} components={components} />
         </div>
@@ -97,4 +76,29 @@ const getFilenfo = async (fileName: string) => {
 
   return await mdxToData(mdxContent)
 }
+
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<{ fileName: string }>
+}): Promise<Metadata> => {
+  const { fileName } = await params
+  const name = decodeURIComponent(fileName) + '.md'
+  const { fontMatter } = await getFilenfo(name)
+  return {
+    title: fontMatter.title,
+    description: fontMatter.description,
+    openGraph: {
+      images: [
+        {
+          url: fontMatter.coverImage,
+          alt: fontMatter.title,
+        },
+      ],
+    },
+  } as Metadata
+}
+
+
 export default ItemBlogPage

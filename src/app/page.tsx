@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <div className="flex justify-center  items-center print:hidden">
         <div>
-          <div className="flex justify-center mt-10 print:hidden md:hidden">
+          <div className="flex justify-center mt-20 print:hidden md:hidden">
             <Image
               alt="profile"
               src={'https://github.com/devshahoriar.png'}
@@ -54,14 +54,14 @@ export default function Home() {
           <div className="flex items-center gap-3 mt-3">
             <ModeToggle />
             <PritButton />
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" size={'sm'}>
               <Link href="/blog">Blogs</Link>
             </Button>
           </div>
         </div>
       </div>
 
-      <section className="mx-auto md:flex border my-5 print:my-0 h-[1320px] w-[1020px] hidden print:flex">
+      <section className="mx-auto md:flex border my-10 print:my-0 h-[1320px] w-[1020px] hidden print:flex">
         {/* // cv sidebar */}
         <aside className="w-[350px] bg-[#3E3E3E] pb-10 bg-opacity-15 dark:bg-opacity-100">
           <div className="mx-4 mt-8">
