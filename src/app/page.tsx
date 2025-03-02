@@ -1,7 +1,7 @@
 import { CV, ModeToggle, PritButton } from '@/components/pages/homePageClient'
 import { Button } from '@/components/shadcn/button'
 import { cn } from '@/lib/utils'
-import { Calendar, Github, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
+import {  Github, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -109,10 +109,10 @@ export default function Home() {
                     Bangladesh
                   </p>
                 </div>
-                <div className="flex gap-4 items-center">
+                {/* <div className="flex gap-4 items-center">
                   <Calendar size={16} />
                   <p>14-dec 1999</p>
-                </div>
+                </div> */}
                 <div className="flex gap-4 items-center">
                   <Github size={16} />
                   <a

@@ -32,7 +32,7 @@ export const CV = () => (
         </TitleWithDescription>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-8">
         <TitleWithButtomBar title="Experience" />
         <TitleWithDescription title="2021-2023">
           <h2 className="font-bold">
@@ -49,7 +49,7 @@ export const CV = () => (
         </TitleWithDescription>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-8">
         <TitleWithButtomBar title="Courses" />
         <TitleWithDescription title="2022">
           <h2 className="font-bold">Think in a Redux way Course</h2>
@@ -79,46 +79,69 @@ export const CV = () => (
             </a>
           </p>
         </TitleWithDescription>
+        <TitleWithDescription title="2025">
+          <h2 className="font-bold">
+            Job Roles in the Cloud & Cloud Essentials Knowledge
+          </h2>
+
+          <p className="font-light">
+            <p>
+              Cloud Essentials Knowledge - Done (A+){' '}
+              <a
+                target="_blank"
+                className="underline"
+                href="https://dcb-use1-aws-academy-prod-ecs-lmsfiles.s3.amazonaws.com/files/a/w/aws_prod1_docebosaas_com/certificate/134_3_6932664_1740189077_AWS%20Course%20Completion%20Certificate.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXNFOCE34WUQOCPFK%2F20250302%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250302T053423Z&X-Amz-SignedHeaders=host&X-Amz-Expires=10800&X-Amz-Signature=a05db092b67bf248c051c6c3c30bfc5497ade4387a2995cc4354b2e54332985b"
+              >
+                Link
+              </a>{' '}
+            </p>
+          </p>
+        </TitleWithDescription>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-15">
         <TitleWithButtomBar title="A few word about myself" />
         <p className="mt-5 text-justify">
-          I am a self-taught passionate{' '}
-          <span className="font-bold">full-stack</span> web developer
-          specializing in <span className="font-bold">MERN</span> stack, as a
-          full-stack developer. I can develop scalable{' '}
-          <span className="font-bold">Nodejs</span>,{' '}
-          <span className="font-bold">ExpressJs</span> &{' '}
+          I am a self-taught, passionate{' '}
+          <span className="font-bold">full-stack web developer</span>{' '}
+          specializing in the <span className="font-bold">MERN stack</span>. I
+          can build scalable applications using{' '}
+          <span className="font-bold">Node.js</span> and{' '}
+          <span className="font-bold">Express.js</span> with{' '}
           <span className="font-bold">MongoDB</span>,{' '}
-          <span className="font-bold">MySql</span>, and{' '}
-          <span className="font-bold">Postgres</span>
-          API that connect with Responsive{' '}
-          <span className="font-bold">ReactJs</span> frontend and{' '}
-          <span className="font-bold">NextJs</span>
-          full-stack framework. I have a comprehensive knowledge of
-          IOT(RaspberyPi, Nodemcu). Currently learning{' '}
-          <span className="font-bold">Go</span> Lang and{' '}
-          <span className="font-bold">Vector </span>
-          Database.
+          <span className="font-bold">MySQL</span>, and{' '}
+          <span className="font-bold">PostgreSQL</span>. I also develop
+          responsive <span className="font-bold">React.js</span> frontends and
+          full-stack applications with{' '}
+          <span className="font-bold">Next.js</span>. I have worked with{' '}
+          <span className="font-bold">three organizations</span>, where I
+          completed their entire{' '}
+          <span className="font-bold">infrastructure</span>, including web
+          servers, websites, and mobile apps. Additionally, I have knowledge of{' '}
+          <span className="font-bold">IoT</span> (Raspberry Pi, NodeMCU).
+          Currently, I am learning <span className="font-bold">Rust</span> and
+          exploring <span className="font-bold">vector databases</span>.
         </p>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-8">
         <TitleWithButtomBar title="Projects" />
         <div className="mt-5">
-          <h2 className="font-semibold">Full stack E-Commerce app </h2>
+          <h2 className="font-semibold">
+            Full stack inventory management system{' '}
+          </h2>
           <p className="font-light">
-            Technologies: NextJs 14 app directory, Mongodb, Tailwindcss
+            Technologies: NextJs 15 app directory, Mysql, Tailwindcss,shadcn/ui.
           </p>
           <p className="font-light">
-            Challenges: SEO optimization, Image optimization & placeholder
+            Challenges:Complex database , Cashing (Apprx:reduce 80% of Db query)
+            SEO optimization, Image optimization & placeholder
           </p>
           <div className="flex items-center mt-4 gap-3">
             <a
               target="_blank"
               className="underline"
-              href="https://lws-final-rnext.vercel.app/"
+              href="https://gco-inventory.vercel.app/"
             >
               Live
             </a>
@@ -126,7 +149,7 @@ export const CV = () => (
             <a
               target="_blank"
               className="underline"
-              href="https://github.com/devshahoriar/lwsFinalRnext"
+              href="https://github.com/devshahoriar/gco_inventory"
             >
               Source Code
             </a>
@@ -156,7 +179,7 @@ const TitleWithDescription = ({
   children: ReactNode
 }) => {
   return (
-    <div className="mt-5 flex justify-between">
+    <div className="mt-3 flex justify-between">
       <p className="font-medium">{title}</p>
       <div className="w-[350px]">{children}</div>
     </div>
@@ -174,9 +197,7 @@ const TitleWithButtomBar = ({ title }: { title: string }) => {
 
 export const PritButton = () => {
   return (
-    <Button asChild 
-    variant={'outline'}
-     size={'sm'}>
+    <Button asChild variant={'outline'} size={'sm'}>
       <Link href={'/api/resume'} className="flex gap-1 items-center">
         Resume
         <BookUser size={16} />
@@ -192,8 +213,14 @@ export const ModeToggle = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm">
-          <Sun size={16} className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon size={16} className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <Sun
+            size={16}
+            className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+          />
+          <Moon
+            size={16}
+            className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+          />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
