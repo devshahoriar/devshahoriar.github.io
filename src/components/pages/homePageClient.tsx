@@ -32,7 +32,7 @@ export const CV = () => (
         </TitleWithDescription>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-2">
         <TitleWithButtomBar title="Experience" />
         <TitleWithDescription title="2021-2023">
           <h2 className="font-bold">
@@ -49,7 +49,7 @@ export const CV = () => (
         </TitleWithDescription>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-2">
         <TitleWithButtomBar title="Courses" />
         <TitleWithDescription title="2022">
           <h2 className="font-bold">Think in a Redux way Course</h2>
@@ -85,16 +85,14 @@ export const CV = () => (
           </h2>
 
           <p className="font-light">
-            <p>
-              Cloud Essentials Knowledge - Done (A+){' '}
-              <a
-                target="_blank"
-                className="underline"
-                href="https://dcb-use1-aws-academy-prod-ecs-lmsfiles.s3.amazonaws.com/files/a/w/aws_prod1_docebosaas_com/certificate/134_3_6932664_1740189077_AWS%20Course%20Completion%20Certificate.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXNFOCE34WUQOCPFK%2F20250302%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250302T053423Z&X-Amz-SignedHeaders=host&X-Amz-Expires=10800&X-Amz-Signature=a05db092b67bf248c051c6c3c30bfc5497ade4387a2995cc4354b2e54332985b"
-              >
-                Link
-              </a>{' '}
-            </p>
+            Cloud Essentials Knowledge - Done (A+){' '}
+            <a
+              target="_blank"
+              className="underline"
+              href="https://dcb-use1-aws-academy-prod-ecs-lmsfiles.s3.amazonaws.com/files/a/w/aws_prod1_docebosaas_com/certificate/134_3_6932664_1740189077_AWS%20Course%20Completion%20Certificate.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXNFOCE34WUQOCPFK%2F20250302%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250302T053423Z&X-Amz-SignedHeaders=host&X-Amz-Expires=10800&X-Amz-Signature=a05db092b67bf248c051c6c3c30bfc5497ade4387a2995cc4354b2e54332985b"
+            >
+              Link
+            </a>{' '}
           </p>
         </TitleWithDescription>
       </div>
@@ -102,25 +100,12 @@ export const CV = () => (
       <div className="mt-15">
         <TitleWithButtomBar title="A few word about myself" />
         <p className="mt-5 text-justify">
-          I am a self-taught, passionate{' '}
-          <span className="font-bold">full-stack web developer</span>{' '}
-          specializing in the <span className="font-bold">MERN stack</span>. I
-          can build scalable applications using{' '}
-          <span className="font-bold">Node.js</span> and{' '}
-          <span className="font-bold">Express.js</span> with{' '}
-          <span className="font-bold">MongoDB</span>,{' '}
-          <span className="font-bold">MySQL</span>, and{' '}
-          <span className="font-bold">PostgreSQL</span>. I also develop
-          responsive <span className="font-bold">React.js</span> frontends and
-          full-stack applications with{' '}
-          <span className="font-bold">Next.js</span>. I have worked with{' '}
-          <span className="font-bold">three organizations</span>, where I
-          completed their entire{' '}
-          <span className="font-bold">infrastructure</span>, including web
-          servers, websites, and mobile apps. Additionally, I have knowledge of{' '}
-          <span className="font-bold">IoT</span> (Raspberry Pi, NodeMCU).
-          Currently, I am learning <span className="font-bold">Rust</span> and
-          exploring <span className="font-bold">vector databases</span>.
+          I’m a self-taught full-stack developer specializing in the MERN stack,
+          building scalable apps with Node.js, Express.js, and databases like
+          MongoDB, MySQL, and PostgreSQL, plus React.js and Next.js frontends.
+          I’ve completed full web app infrastructure for two organizations,
+          including servers, sites, and mobile apps. I know IoT (Raspberry Pi,
+          NodeMCU) and am learning Rust and vector databases.
         </p>
       </div>
 
