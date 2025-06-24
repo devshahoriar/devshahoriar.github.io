@@ -23,7 +23,7 @@ type FONTMATER = {
 
 export const mdxToData = async (mdxContent: string) => {
   const { data: fontMatter , content } = matter(mdxContent) as unknown as {data:FONTMATER,content:string}
-  const processedContent = await remark().use(remarkParse).parse(content)
+  const processedContent = remark().use(remarkParse).parse(content)
 
   const headings: string[] = []
   visit(processedContent, 'heading', (node: any) => {

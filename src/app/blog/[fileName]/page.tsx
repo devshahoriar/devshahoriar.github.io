@@ -2,7 +2,7 @@
 import { Code, H, MDX, Pre } from '@/components/pages/homePageClient'
 import { mdxToData } from '@/lib/utils'
 import { promises as fs } from 'fs'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import path from 'path'
 
