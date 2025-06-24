@@ -25,7 +25,7 @@ const ItemBlogPage = async ({
 
       <div className="relative container mx-auto">
         <Image
-          className="object-cover -z-[1] absolute top-0 bottom-0 left-0 right-0  w-[98%] h-[800px] blur-2xl opacity-50"
+          className="object-cover -z-[1] fixed top-0 bottom-0 left-0 right-0  w-[100%] h-[100vh] blur-2xl opacity-50 scale-105"
           height={500}
           width={500}
           alt="post cover"

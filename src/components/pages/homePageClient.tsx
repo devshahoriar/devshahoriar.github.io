@@ -108,31 +108,30 @@ export const CV = () => (
         <TitleWithButtomBar title="Projects" />
         <div className="mt-5">
           <h2 className="font-semibold">
-            Full stack inventory management system{' '}
+           Global Community Organization App{' '}
           </h2>
           <p className="font-light">
-            Technologies: NextJs 15 app directory, Mysql, Tailwindcss,shadcn/ui.
+            Technologies: Next.js, TypeScript, NextAuth, PostgreSQL, shadcn/ui.
           </p>
           <p className="font-light">
-            Challenges:Complex database , Cashing (Apprx:reduce 80% of Db query)
-            SEO optimization, Image optimization & placeholder
+            Developed a full-stack application for a sustainability nonprofit. Implemented secure user authentication, admin controls, tree/child data management with GPS tracking, and real-time analytics. Strengthened skills in end-to-end development and mission-driven solutions.
           </p>
-          <div className="flex items-center mt-4 gap-3">
+          <div className="flex items-center mt-0 gap-3">
             <a
               target="_blank"
               className="underline"
-              href="https://gco-inventory.vercel.app/"
+              href="https://devshahoriar.vercel.app/blog/gco-tree-count-app"
             >
-              Live
+              Blog
             </a>
-            <p>-</p>
-            <a
+            {/* <p>-</p> */}
+            {/* <a
               target="_blank"
               className="underline"
               href="https://github.com/devshahoriar/gco_inventory"
             >
               Source Code
-            </a>
+            </a> */}
           </div>
           <p className="mt-5">
             Lot of interesting project are keep in{' '}

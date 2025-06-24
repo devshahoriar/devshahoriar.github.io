@@ -5,6 +5,9 @@ const nextConfig = {
       {
         hostname: 'github.com',
       },
+      {
+        hostname:"res.cloudinary.com"
+      }
     ],
   },
   transpilePackages: ['next-mdx-remote'],
