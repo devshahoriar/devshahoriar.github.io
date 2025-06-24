@@ -100,12 +100,7 @@ export const CV = () => (
       <div className="mt-15">
         <TitleWithButtomBar title="A few word about myself" />
         <p className="mt-5 text-justify">
-          I’m a self-taught full-stack developer specializing in the MERN stack,
-          building scalable apps with Node.js, Express.js, and databases like
-          MongoDB, MySQL, and PostgreSQL, plus React.js and Next.js frontends.
-          I’ve completed full web app infrastructure for two organizations,
-          including servers, sites, and mobile apps. I know IoT (Raspberry Pi,
-          NodeMCU) and am learning Rust and vector databases.
+        I am a self-taught, passionate full-stack web developer specializing in the MERN stack. I build scalable applications with Node.js, Express.js, and databases like MongoDB, MySQL, and PostgreSQL, alongside responsive React.js frontends and full-stack Next.js projects. Recently, I completed the full web app infrastructure for three organizations, including web servers, websites, and mobile apps. I’m skilled in IoT (Raspberry Pi, NodeMCU) and currently learning Rust while diving deeper into vector databases.
         </p>
       </div>
 

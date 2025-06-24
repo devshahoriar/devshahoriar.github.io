@@ -141,16 +141,7 @@ export default function Home() {
             <div className="mt-8">
               <TitleWithBar title="Skills" />
               <div className="flex flex-col gap-4 mt-5 mx-2">
-                <div className="flex items-center justify-between">
-                  <p>Javascript</p>
-                  <div className="flex gap-1">
-                    <RoundeCircle />
-                    <RoundeCircle />
-                    <RoundeCircle />
-                    <RoundeCircle />
-                    <RoundeCircle />
-                  </div>
-                </div>
+                
 
                 <div className="flex items-center justify-between">
                   <p>React Js</p>
@@ -193,6 +184,17 @@ export default function Home() {
                     <RoundeCircle />
                     <RoundeCircle />
                     <RoundeCircle />
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <p>Typescript</p>
+                  <div className="flex gap-1">
+                    <RoundeCircle />
+                    <RoundeCircle />
+                    <RoundeCircle />
+                    <RoundeCircle />
+                    <RoundeCircle noFill />
                   </div>
                 </div>
 
