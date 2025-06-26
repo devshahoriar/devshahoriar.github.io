@@ -1,6 +1,6 @@
 ---
 title: GCO(Global Community Organization) tree counting app
-description: This app use to calculate GCO's internal tree count
+description: Full-stack app with TypeScript, Next.js, and Prisma—modern, scalable, and all me!
 coverImage: https://res.cloudinary.com/dow1abm8v/image/upload/v1750774514/myImages/u1aqamedciiryakr0xhb.png
 tags: Nextjs,Postgres,GCO
 ---
