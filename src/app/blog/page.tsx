@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { mdxToData } from '@/lib/utils'
-import { promises as fs } from 'fs'
+import allSortMDX from '@/lib/allSortMDX'
 import Image from 'next/image'
 import Link from 'next/link'
-import path from 'path'
 
 type ITEM_MDX = {
   birthtime: Date
@@ -14,30 +12,9 @@ type ITEM_MDX = {
   fileName: string
 }
 
-const allSortMDX = async () => {
-  const mdxPath = path.join(process.cwd(), 'mdx')
-  const fMdx = await fs.readdir(mdxPath)
-  const promisses: any = []
-  fMdx.forEach((n) => {
-    const x = async () => {
-      const mdxOnePath = path.join(mdxPath, n)
-      const textMdx = await fs.readFile(mdxOnePath, 'utf8')
-      const { fontMatter } = await mdxToData(textMdx)
-      const { birthtime } = await fs.stat(mdxOnePath)
-      return { fileName: n, birthtime, ...fontMatter }
-    }
-    promisses.push(x())
-  })
-
-  return (await Promise.all(promisses)).sort(
-    (a: any, b: any) =>
-      new Date(b.birthtime).getTime() - new Date(a.birthtime).getTime()
-  )
-}
 
 const BlogPage = async () => {
   const allSortedMdxData: ITEM_MDX[] = await allSortMDX()
-
   return (
     <>
       <section className='container'>
@@ -50,9 +27,9 @@ const BlogPage = async () => {
         </div>
       </section>
 
-      <section className='container my-5 space-y-5'>
+      <section className='container my-5'>
         <p className='opacity-70'>Posts</p>
-        <div className='flex gap-[25px] flex-wrap'>
+        <div className='flex gap-x-[25px] flex-wrap'>
           {allSortedMdxData.map((item, i) => (
             <BlogItem data={item} key={i} />
           ))}
@@ -70,8 +47,9 @@ const BlogItem = ({
   return (
     <div className='flex-[0_0_100%] sm:flex-[0_0_calc(50%-25px)] lg:flex-[0_0_calc(33.33333%-25px)] group overflow-hidden'>
       <Link
-        className='cursor-pointer'
+        className='cursor-pointer p-1'
         href={`/blog/${encodeURIComponent(fileName.split('.')[0])}`}
+        
       >
         <Image
           alt='devshahora Shahoriar'
@@ -85,8 +63,8 @@ const BlogItem = ({
           <h2 className='text-2xl font-semibold line-clamp-1'>{title}</h2>
 
           <p className='text-sm line-clamp-2 opacity-90'>{description}</p>
-          <div className='space-x-2'>
-            {tags.split(',').map((tag) => (
+          <div className='space-x-2 text-xs mt-2 '>
+            {tags?.split(',').map((tag) => (
               <span
                 key={tag}
                 className='dark:bg-white bg-black bg-opacity-30 px-2 py-[2px] text-white dark:text-black rounded-sm'

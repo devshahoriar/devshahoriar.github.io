@@ -5,7 +5,6 @@ import matter from 'gray-matter'
 import { serialize } from 'next-mdx-remote/serialize'
 import rehypeHighlight from 'rehype-highlight'
 import { remark } from 'remark'
-// @ts-expect-error "for ok"
 import remarkParse from 'remark-parse'
 import { twMerge } from 'tailwind-merge'
 import { visit } from 'unist-util-visit'

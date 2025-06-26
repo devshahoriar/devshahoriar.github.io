@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Code, H, MDX, Pre } from '@/components/pages/homePageClient'
+import allSortMDX from '@/lib/allSortMDX'
 import { mdxToData } from '@/lib/utils'
 import { promises as fs } from 'fs'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import path from 'path'
 
+const components = { Image, h2: H, h1: H, pre: Pre, code: Code }
+
+export const dynamic = 'force-static'
 
 const ItemBlogPage = async ({
   params,
@@ -25,7 +29,7 @@ const ItemBlogPage = async ({
 
       <div className="relative container mx-auto">
         <Image
-          className="object-cover -z-[1] fixed top-0 bottom-0 left-0 right-0  w-[100%] h-[100vh] blur-2xl opacity-50 scale-105"
+          className="object-cover -z-[1] fixed top-0 bottom-0 left-0 right-0  w-[100%] h-[100vh] blur-md opacity-50 scale-105"
           height={500}
           width={500}
           alt="post cover"
@@ -69,12 +73,19 @@ const ItemBlogPage = async ({
   )
 }
 
-const components = { Image, h2: H, h1: H, pre: Pre, code: Code }
+
 const getFilenfo = async (fileName: string) => {
   const mdxPath = path.join(process.cwd(), 'mdx', fileName)
   const mdxContent = await fs.readFile(mdxPath, 'utf-8')
-
   return await mdxToData(mdxContent)
+}
+
+export async function generateStaticParams() {
+  const mdsxs:any = await allSortMDX()
+ 
+  return mdsxs.map((m:any) => ({
+    fileName: encodeURIComponent(m?.fileName.split('.')[0]),
+  }))
 }
 
 
