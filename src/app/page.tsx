@@ -1,4 +1,5 @@
 import { FlickeringGrid } from '@/components/magicui/flickering-grid'
+import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import {
   ModeToggle,
   PritButton,
@@ -7,7 +8,6 @@ import {
 } from '@/components/pages/homePageClient'
 import { Button } from '@/components/shadcn/button'
 import { LinkPreview } from '@/components/ui/link-preview'
-import { cn } from '@/lib/utils'
 import { Github, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -80,41 +80,47 @@ export default function Home() {
       </div>
 
       {/* //main cv section */}
-      <section className='mx-auto md:flex border my-10 print:my-0 h-[1320px] w-[1020px] hidden print:flex'>
+      <section className='mx-auto md:flex my-10 print:my-0 h-[1320px] w-[1020px] hidden print:flex'>
+      <NeonGradientCard className='' borderRadius={0}  borderSize={2}>
+        <div className='h-[1320px] w-[1020px] flex'>
+
         {/* // cv sidebar */}
         <CvSide />
         {/* //cv description */}
         <CV />
+        </div>
+      </NeonGradientCard>
       </section>
-      
     </>
   )
 }
 
 const CvSide = () => {
   return (
-    <aside className='w-[350px] bg-[#3E3E3E] pb-10 bg-opacity-15 dark:bg-opacity-100'>
+    <aside className='w-[350px] bg-[#494949]  bg-opacity-15 print:dark:bg-opacity-15 print:bg-opacity-15 dark:bg-opacity-15'>
       <div className='mx-4 mt-8'>
         <div className='flex justify-center'>
-          <Image
-            alt='profile'
-            src={'https://github.com/devshahoriar.png'}
-            height={500}
-            width={500}
-            className='size-60 object-cover rounded-full'
-          />
+         
+            <Image
+              alt='profile'
+              src={'https://github.com/devshahoriar.png'}
+              height={500}
+              width={500}
+              className='size-60 object-cover rounded-full'
+            />
+        
         </div>
         <div className='mt-5'>
           <h1 className='text-center text-2xl font-semibold'>
             Shahoriar Ahmed
           </h1>
-          <p className='text-center mt-4 text-[15px]'>
+          <p className='text-center mt-2 text-[15px]'>
             Full stack web developer
             <br /> specialized in MERN stack
           </p>
         </div>
 
-        <div className='mt-8'>
+        <div className='mt-4'>
           <TitleWithBar title='Contact' />
           <div className='flex flex-col gap-5 mt-5 mx-2'>
             <div className='flex items-center gap-4'>
@@ -142,108 +148,49 @@ const CvSide = () => {
                 </div> */}
             <div className='flex gap-4 items-center'>
               <Github size={16} />
-              <a
+
+              <LinkPreview
                 className='hover:underline'
-                href='https://github.com/devshahoriar'
-                target='_blank'
-                rel='noopener noreferrer'
+                isStatic
+                url='https://github.com/devshahoriar?tab=repositories'
+                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlu0Dx6aVTJ7OTVPYZ3D5uwXBhKGxzQ2tkL1CyN'
               >
                 github.com/devshahoriar
-              </a>
+              </LinkPreview>
             </div>
             <div className='flex gap-4 items-center'>
               <Linkedin size={16} />
-              <a
+
+              <LinkPreview
                 className='hover:underline'
-                href='https://www.linkedin.com/in/devshahoriar/'
-                target='_blank'
-                rel='noopener noreferrer'
+                isStatic
+                url='https://www.linkedin.com/in/devshahoriar/'
+                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluuokbYG7csPwhnjrFHz6bmS90QZCydKLBMp3D'
               >
                 linkedin.com/in/devshahoriar
-              </a>
+              </LinkPreview>
             </div>
           </div>
         </div>
 
         <div className='mt-8'>
           <TitleWithBar title='Skills' />
-          <div className='flex flex-col gap-4 mt-5 mx-2'>
-            <div className='flex items-center justify-between'>
-              <p>React Js</p>
-              <div className='flex gap-1'>
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-              </div>
-            </div>
-
-            <div className='flex items-center justify-between'>
-              <p>Next Js</p>
-              <div className='flex gap-1'>
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-              </div>
-            </div>
-
-            <div className='flex items-center justify-between'>
-              <p>Node Js</p>
-              <div className='flex gap-1'>
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-              </div>
-            </div>
-
-            <div className='flex items-center justify-between'>
-              <p>Redux</p>
-              <div className='flex gap-1'>
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-              </div>
-            </div>
-
-            <div className='flex items-center justify-between'>
-              <p>Typescript</p>
-              <div className='flex gap-1'>
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle noFill />
-              </div>
-            </div>
-
-            <div className='flex items-center justify-between'>
-              <p>MongoDb</p>
-              <div className='flex gap-1'>
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle noFill />
-              </div>
-            </div>
-
-            <div className='flex items-center justify-between'>
-              <p>Mysql</p>
-              <div className='flex gap-1'>
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle />
-                <RoundeCircle noFill={true} />
-              </div>
-            </div>
+          <div className='space-y-2'>
+            <p>
+              Programming Languages: Typescript, Javascript (proficient).
+              Python, GO (knowledge)
+            </p>
+            <p>
+              Frameworks: NextJs, Expo, ExpressJs, HonoJS (proficient). NestJS, Gin
+              (knowledge)
+            </p>
+            <p>Databases: MySql,Postgres(proficient). MongoDb (knowledge)</p>
+            <p>Version Control: Git, GitHub</p>
+            <p>
+              Other Tools & Technologies: Docker, OAuth, JWT, Rest Framework,
+              Linux Terminal, AWS, Digital Ocean, Vultr, Heroku (cloud
+              technologies)
+            </p>
           </div>
         </div>
 
@@ -277,7 +224,7 @@ const CvSide = () => {
 }
 
 const CV = () => (
-  <div className='flex-1 dark:bg-[#1a1a1a]'>
+  <div className='flex-1 dark:bg-[#1a1a1a] print:dark:bg-white print:dark:text-black'>
     <div className='mx-4 mt-12'>
       <div>
         <TitleWithButtomBar title='Education' />
@@ -293,7 +240,7 @@ const CV = () => (
         </TitleWithDescription>
       </div>
 
-      <div className='mt-2'>
+      <div>
         <TitleWithButtomBar title='Experience' />
         <TitleWithDescription title='2021-2023'>
           <h2 className='font-bold'>
@@ -310,7 +257,7 @@ const CV = () => (
         </TitleWithDescription>
       </div>
 
-      <div className='mt-2'>
+      <div>
         <TitleWithButtomBar title='Courses' />
         <TitleWithDescription title='2022'>
           <h2 className='font-bold'>Think in a Redux way Course</h2>
@@ -352,7 +299,7 @@ const CV = () => (
           </h2>
 
           <div className='font-light'>
-            Cloud Essentials Knowledge - Done (A+){' '}
+            A+{' '}
             <LinkPreview
               target='_blank'
               className='underline'
@@ -367,9 +314,9 @@ const CV = () => (
         </TitleWithDescription>
       </div>
 
-      <div className='mt-15'>
+      <div>
         <TitleWithButtomBar title='A few word about myself' />
-        <p className='mt-5 text-justify'>
+        <p className='mt-1 text-justify'>
           I am a self-taught, passionate full-stack web developer specializing
           in the <b>MERN</b> stack. I build scalable applications with{' '}
           <b>Node.js</b>, <b>Express.js</b>, and databases like <b>MongoDB</b>,{' '}
@@ -378,33 +325,32 @@ const CV = () => (
           Recently, I completed the full web app infrastructure for three
           organizations, including web servers, websites, and mobile apps. I’m
           skilled in <b>IoT</b> (<b>Raspberry Pi</b>, <b>NodeMCU</b>) and
-          currently learning <b>Rust</b> while diving deeper into{' '}
-          <b>vector databases</b>.
+          currently learning <b>Go</b> while diving deeper into{' '}
+          <b>vector databases, RAG</b>.
         </p>
       </div>
 
-      <div className='mt-5'>
+      <div className='mt-2'>
         <TitleWithButtomBar title='Projects' />
-        <div className='mt-5'>
+        <div className='mt-2'>
           <h2 className='font-semibold'>Global Community Organization App </h2>
-          <p className=''>
+          <p className='text-sm'>
             Technologies: Next.js, TypeScript, NextAuth, PostgreSQL, Shadcn/ui.
           </p>
-          <p className='text-justify'>
+          <div className='text-justify'>
             <b>Solely developed</b> a full-stack application from front-end to
-            back-end and database for a sustainability nonprofit, powering an
-            entire office's operations. Implemented secure user authentication,
-            admin controls, and real-time analytics, managing over{' '}
-            <b>300,000</b> tree records, <b>50,000+</b> child records, and
-            continuously growing data. Supports <b>80+</b> employees with daily
-            report generation. Strengthened expertise in end-to-end development
-            and mission-driven solutions.{' '}
+            back-end and database, powering an entire office's operations.
+            Implemented secure user authentication, admin controls, and
+            real-time analytics, managing over <b>300,000</b> tree records,{' '}
+            <b>50,000+</b> child records, and continuously growing data.
+            Supports <b>80+</b> employees with daily report generation.
+            Strengthened expertise in end-to-end development and mission-driven
+            solutions.{' '}
             <span className='text-xs'>
               Due to the project’s private nature, I cannot share the source
               code,
             </span>
-          </p>
-          <div className='flex items-center mt-0 gap-3'>
+            {'  '}
             <LinkPreview
               className='underline'
               isStatic
@@ -415,33 +361,53 @@ const CV = () => (
               Blog
             </LinkPreview>
           </div>
-          <p className='mt-3'>
-            Lot of interesting project are keep in{' '}
-            <a
+          <div className='mt-2'>
+            <h2 className='font-semibold'>Inventory Management System</h2>
+            <div>
+              <p>
+                A powerful, full-stack inventory management solution built with
+                modern technologies, focusing on performance and scalability.
+              </p>
+              <LinkPreview
+                className='underline'
+                isStatic
+                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlu1rv29qXXBZt8M0LS4vjHYbuVFeGqEUlIWQAP'
+                quality={70}
+                url='https://github.com/devshahoriar/gco_inventory'
+              >
+                Source Code
+              </LinkPreview>{' '}
+              <LinkPreview
+                className='underline'
+                isStatic
+                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluetLAJsf0zDZuavXKUdFQ6VkWlCg3nSEBso71'
+                quality={70}
+                url='https://gco-inventory.vercel.app/'
+              >
+                Live
+              </LinkPreview>
+            </div>
+          </div>
+
+          <div className='mt-3'>
+            Developed multiple proprietary web projects for organizations and
+            startups over 4 years, leveraging my full-stack expertise. Check out
+            my open-source projects on{' '}
+            <LinkPreview
               className='underline'
-              href='https://github.com/devshahoriar?tab=repositories'
-              target='_blank'
-              rel='noopener noreferrer'
+              isStatic
+              url='https://github.com/devshahoriar?tab=repositories'
+              imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlu0Dx6aVTJ7OTVPYZ3D5uwXBhKGxzQ2tkL1CyN'
             >
               Github
-            </a>
-          </p>
+            </LinkPreview>
+            .
+          </div>
         </div>
       </div>
     </div>
   </div>
 )
-
-const RoundeCircle = ({ noFill }: { noFill?: boolean }) => {
-  return (
-    <div
-      className={cn(
-        'size-4 border-2 border-slate-500 rounded-full',
-        noFill ? 'bg-transparent' : 'bg-slate-500'
-      )}
-    />
-  )
-}
 
 const TitleWithBar = ({ title }: { title: string }) => {
   return (

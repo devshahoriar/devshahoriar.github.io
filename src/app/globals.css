@@ -77,6 +77,9 @@ body {
     margin: 0;
   }
 }
+b {
+  @apply font-medium;
+}
 
 .gd {
   background: hsla(254, 68%, 9%, 1);
@@ -104,4 +107,39 @@ body {
     hsla(320, 77%, 55%, 1) 66%,
     hsla(316, 41%, 93%, 1) 100%
   );
+}
+
+@layer base {
+  .theme {
+    --animate-background-position-spin: background-position-spin 3000ms infinite alternate;
+    --animate-grid: grid 15s linear infinite;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes background-position-spin {
+  0% {
+    background-position: top center;
+    }
+  100% {
+    background-position: bottom center;
+    }
+  }
+  @keyframes grid {
+  0% {
+    transform: translateY(-50%);
+    }
+  100% {
+    transform: translateY(0);
+    }
+  }
 }
