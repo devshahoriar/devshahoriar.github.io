@@ -12,6 +12,13 @@ import { Github, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+function getRandomBrightHSLColor() {
+  const h = Math.floor(Math.random() * 361) // Hue: 0-360
+  const s = Math.floor(Math.random() * (100 - 70) + 70) // Saturation: 70-100% (high saturation for vividness)
+  const l = Math.floor(Math.random() * (100 - 60) + 60) // Lightness: 60-100% (high lightness for brightness)
+  return `hsl(${h}, ${s}%, ${l}%)`
+}
+
 export default function Home() {
   return (
     <>
@@ -81,15 +88,21 @@ export default function Home() {
 
       {/* //main cv section */}
       <section className='mx-auto md:flex my-10 print:my-0 h-[1320px] w-[1020px] hidden print:flex'>
-      <NeonGradientCard className='' borderRadius={0}  borderSize={2}>
-        <div className='h-[1320px] w-[1020px] flex'>
-
-        {/* // cv sidebar */}
-        <CvSide />
-        {/* //cv description */}
-        <CV />
-        </div>
-      </NeonGradientCard>
+        <NeonGradientCard
+          neonColors={{
+            firstColor: getRandomBrightHSLColor(),
+            secondColor: getRandomBrightHSLColor(),
+          }}
+          borderRadius={0}
+          borderSize={3}
+        >
+          <div className='h-[1320px] w-[1020px] flex'>
+            {/* // cv sidebar */}
+            <CvSide />
+            {/* //cv description */}
+            <CV />
+          </div>
+        </NeonGradientCard>
       </section>
     </>
   )
@@ -100,15 +113,13 @@ const CvSide = () => {
     <aside className='w-[350px] bg-[#494949]  bg-opacity-15 print:dark:bg-opacity-15 print:bg-opacity-15 dark:bg-opacity-15'>
       <div className='mx-4 mt-8'>
         <div className='flex justify-center'>
-         
-            <Image
-              alt='profile'
-              src={'https://github.com/devshahoriar.png'}
-              height={500}
-              width={500}
-              className='size-60 object-cover rounded-full'
-            />
-        
+          <Image
+            alt='profile'
+            src={'https://github.com/devshahoriar.png'}
+            height={500}
+            width={500}
+            className='size-60 object-cover rounded-full'
+          />
         </div>
         <div className='mt-5'>
           <h1 className='text-center text-2xl font-semibold'>
@@ -178,11 +189,11 @@ const CvSide = () => {
           <div className='space-y-2'>
             <p>
               Programming Languages: Typescript, Javascript (proficient).
-              Python, GO (knowledge)
+              GO, Python (knowledge)
             </p>
             <p>
-              Frameworks: NextJs, Expo, ExpressJs, HonoJS (proficient). NestJS, Gin
-              (knowledge)
+              Frameworks: NextJs, Expo, ExpressJs, HonoJS (proficient). NestJS,
+              Gin (knowledge)
             </p>
             <p>Databases: MySql,Postgres(proficient). MongoDb (knowledge)</p>
             <p>Version Control: Git, GitHub</p>
@@ -225,7 +236,7 @@ const CvSide = () => {
 
 const CV = () => (
   <div className='flex-1 dark:bg-[#1a1a1a] print:dark:bg-white print:dark:text-black'>
-    <div className='mx-4 mt-12'>
+    <div className='mx-4 mt-8'>
       <div>
         <TitleWithButtomBar title='Education' />
 
@@ -405,6 +416,12 @@ const CV = () => (
           </div>
         </div>
       </div>
+      <a
+        className='print:block text-xs underline mt-1 hidden'
+        href='https://devshahoriar.vercel.app/'
+      >
+        Goto Online Version
+      </a>
     </div>
   </div>
 )
