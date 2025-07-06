@@ -29,11 +29,8 @@ export default function RootLayout({
           name='googlebot-news'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <Script
-          strategy='afterInteractive'
-          src='https://www.googletagmanager.com/gtag/js?id=G-6HG3ZJWVCP'
-        ></Script>
-        <Script id='google-analytics' strategy='afterInteractive'>
+        <Script src='https://www.googletagmanager.com/gtag/js?id=G-6HG3ZJWVCP'></Script>
+        <Script>
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
