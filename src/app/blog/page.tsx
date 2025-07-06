@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { InteractiveGridPattern } from '@/components/magicui/interactive-grid-pattern'
-import { RetroGrid } from '@/components/magicui/retro-grid'
 import allSortMDX from '@/lib/allSortMDX'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
@@ -15,21 +14,20 @@ type ITEM_MDX = {
   fileName: string
 }
 
-
 const BlogPage = async () => {
   const allSortedMdxData: ITEM_MDX[] = await allSortMDX()
   return (
     <>
       <section className='container relative'>
         <InteractiveGridPattern
-        className={cn(
-          "[mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]",
-        )}
-        width={20}
-        height={20}
-        squares={[80, 80]}
-        squaresClassName="hover:fill-yellow-500   dark:hover:fill-yellow-300 transition-colors duration-300"
-      />
+          className={cn(
+            '[mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]'
+          )}
+          width={20}
+          height={20}
+          squares={[80, 80]}
+          squaresClassName='hover:fill-yellow-500   dark:hover:fill-yellow-300 transition-colors duration-300'
+        />
         <div className='gd md:h-[300px] sm:h-[250px] h-[200px] xl:h-[400px] flex justify-center items-center'>
           <div className='md:scale-125 text-white'>
             <p>Hi👋. I&apos;m</p>
@@ -61,7 +59,6 @@ const BlogItem = ({
       <Link
         className='cursor-pointer p-1'
         href={`/blog/${encodeURIComponent(fileName.split('.')[0])}`}
-        
       >
         <Image
           alt='devshahora Shahoriar'

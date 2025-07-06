@@ -27,7 +27,7 @@ const ItemBlogPage = async ({
         rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css'
       />
-      <TracingBeam className=''>
+      <TracingBeam key={fileName} >
         <div className='relative container mx-auto'>
           <Image
             className='object-cover -z-[1] fixed top-0 bottom-0 left-0 right-0  w-[100%] h-[100vh] blur-md opacity-50 scale-105'

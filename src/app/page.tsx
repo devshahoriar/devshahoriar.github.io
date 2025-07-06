@@ -1,4 +1,3 @@
-import { FlickeringGrid } from '@/components/magicui/flickering-grid'
 import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import {
   ModeToggle,
@@ -22,16 +21,7 @@ function getRandomBrightHSLColor() {
 export default function Home() {
   return (
     <>
-      <div className='fixed h-screen w-screen top-0 left-0 print:hidden z-[-1]'>
-        <FlickeringGrid
-          className='relative inset-0 [mask-image:radial-gradient(1800px_circle_at_center,transparent,white)]'
-          squareSize={10}
-          gridGap={5}
-          color='#60A5FA'
-          maxOpacity={0.4}
-          flickerChance={0.1}
-        />
-      </div>
+
 
       <div className='flex justify-center  items-center print:hidden'>
         <div>
