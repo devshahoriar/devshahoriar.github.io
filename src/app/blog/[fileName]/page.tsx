@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Code, H, MDX, Pre } from '@/components/pages/homePageClient'
-import { TracingBeam } from '@/components/ui/tracing-beam'
 import allSortMDX from '@/lib/allSortMDX'
 import { mdxToData } from '@/lib/utils'
 import { promises as fs } from 'fs'
@@ -27,10 +26,10 @@ const ItemBlogPage = async ({
         rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css'
       />
-      <TracingBeam key={fileName} >
+     
         <div className='relative container mx-auto'>
           <Image
-            className='object-cover -z-[1] fixed top-0 bottom-0 left-0 right-0  w-[100%] h-[100vh] blur-md opacity-50 scale-105'
+            className='object-cover -z-[1] fixed top-0 bottom-0 left-0 right-0  w-[100%] h-[100dvh] blur-md opacity-50 scale-105'
             height={500}
             width={500}
             alt='post cover'
@@ -70,7 +69,7 @@ const ItemBlogPage = async ({
             <MDX {...mdxSource} components={components} />
           </div>
         </section>
-      </TracingBeam>
+ 
     </>
   )
 }
