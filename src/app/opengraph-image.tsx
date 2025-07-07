@@ -10,15 +10,13 @@ export default async function Image() {
     (
       <div
         style={{
-          background: '#ddd',
+          background: 'black',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
-          backgroundImage:
-            'radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%)',
-          backgroundSize: '100px 100px',
+    
         }}
       >
         <img
@@ -32,7 +30,7 @@ export default async function Image() {
             objectFit: 'cover',
             objectPosition: 'top',
             borderRadius: '100000px',
-            marginTop: '10px',
+            marginTop: '20px',
           }}
         />
         <div
@@ -43,6 +41,7 @@ export default async function Image() {
             justifyItems: 'center',
             alignItems: 'center',
             marginTop: '20px',
+            color: '#fff',
             lineHeight: '10px',
           }}
         >
@@ -52,7 +51,7 @@ export default async function Image() {
             Shahoriar Ahmed
           </h1>
           <p style={{ textAlign: 'center' }}>Full stack web developer</p>
-          <b style={{ textAlign: 'center' }}>#nodejs #nextjs #reactjs</b>
+          <b style={{ textAlign: 'center' }}>#nodejs #nextjs #reactjs #expo</b>
         </div>
       </div>
     ),

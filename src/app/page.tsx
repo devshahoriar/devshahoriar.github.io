@@ -1,4 +1,3 @@
-import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import {
   GrBg,
   ModeToggle,
