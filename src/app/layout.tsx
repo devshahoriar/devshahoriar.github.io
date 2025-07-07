@@ -1,7 +1,7 @@
 import ThemeProvider from '@/provider/ThemeProvider'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const popins = Poppins({
@@ -29,20 +29,13 @@ export default function RootLayout({
           name='googlebot-news'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <Script src='https://www.googletagmanager.com/gtag/js?id=G-6HG3ZJWVCP' strategy='lazyOnload'></Script>
-        <Script strategy='lazyOnload'>
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-6HG3ZJWVCP');`}
-        </Script>
       </head>
       <body className={`antialiased ${popins.className}`}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           {children}
         </ThemeProvider>
       </body>
+       < GoogleAnalytics gaId='G-VR9M63Z11D' />
     </html>
   )
 }

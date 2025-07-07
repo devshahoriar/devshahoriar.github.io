@@ -1,5 +1,6 @@
 import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import {
+  GrBg,
   ModeToggle,
   PritButton,
   TitleWithButtomBar,
@@ -11,18 +12,9 @@ import { Github, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function getRandomBrightHSLColor() {
-  const h = Math.floor(Math.random() * 361) // Hue: 0-360
-  const s = Math.floor(Math.random() * (100 - 70) + 70) // Saturation: 70-100% (high saturation for vividness)
-  const l = Math.floor(Math.random() * (100 - 60) + 60) // Lightness: 60-100% (high lightness for brightness)
-  return `hsl(${h}, ${s}%, ${l}%)`
-}
-
 export default function Home() {
   return (
     <>
-
-
       <div className='flex justify-center  items-center print:hidden'>
         <div>
           <div className='flex justify-center mt-20 print:hidden md:hidden'>
@@ -78,21 +70,14 @@ export default function Home() {
 
       {/* //main cv section */}
       <section className='mx-auto md:flex my-10 print:my-0 h-[1320px] w-[1020px] hidden print:flex'>
-        <NeonGradientCard
-          neonColors={{
-            firstColor: getRandomBrightHSLColor(),
-            secondColor: getRandomBrightHSLColor(),
-          }}
-          borderRadius={0}
-          borderSize={3}
-        >
+        <GrBg>
           <div className='h-[1320px] w-[1020px] flex'>
             {/* // cv sidebar */}
             <CvSide />
             {/* //cv description */}
             <CV />
           </div>
-        </NeonGradientCard>
+        </GrBg>
       </section>
     </>
   )
@@ -178,8 +163,8 @@ const CvSide = () => {
           <TitleWithBar title='Skills' />
           <div className='space-y-2'>
             <p>
-              Programming Languages: Typescript, Javascript (proficient).
-              GO, Python (knowledge)
+              Programming Languages: Typescript, Javascript (proficient). GO,
+              Python (knowledge)
             </p>
             <p>
               Frameworks: NextJs, Expo, ExpressJs, HonoJS (proficient). NestJS,

@@ -14,6 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../shadcn/dropdown-menu'
+import dynamic from 'next/dynamic'
 
 export const TitleWithDescription = ({
   children,
@@ -129,4 +130,34 @@ export const Code = (props: any) => {
   )
 }
 
+function getRandomBrightHSLColor() {
+  const h = Math.floor(Math.random() * 361)
+  const s = Math.floor(Math.random() * (100 - 70) + 70)
+  const l = Math.floor(Math.random() * (100 - 60) + 60)
+  return `hsl(${h}, ${s}%, ${l}%)`
+}
 
+const NeonGradientCard = dynamic(
+  () =>
+    import('@/components/magicui/neon-gradient-card').then(
+      (x) => x.NeonGradientCard
+    ),
+  {
+    ssr: false,
+  }
+)
+
+export const GrBg = ({ children }: { children: ReactNode }) => {
+  return (
+    <NeonGradientCard
+      neonColors={{
+        firstColor: getRandomBrightHSLColor(),
+        secondColor: getRandomBrightHSLColor(),
+      }}
+      borderRadius={0}
+      borderSize={3}
+    >
+      {children}
+    </NeonGradientCard>
+  )
+}
