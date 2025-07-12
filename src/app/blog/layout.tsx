@@ -14,7 +14,7 @@ const layout = ({children}:{children:ReactNode}) => {
             @devshahoriar
           </h1></Link>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-end gap-3">
           <ModeToggle />
           <Button asChild variant="outline" size="sm">
             <Link href="/" className="flex items-center gap-1">

@@ -7,6 +7,8 @@ const nextConfig = {
       },
       {
         hostname:"res.cloudinary.com"
+      },{
+        hostname:'ion71pbmpa.ufs.sh'
       }
     ],
   },

@@ -122,7 +122,7 @@ export const Code = (props: any) => {
         }}
         ref={ref}
         {...props}
-        className='text-sm font-mono cursor-pointer'
+        className='text-sm font-mono cursor-pointer text-wrap break-all'
       >
         {props.children}
       </code>
