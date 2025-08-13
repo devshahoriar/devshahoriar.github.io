@@ -311,7 +311,7 @@ const CV = () => (
           organizations, including web servers, websites, and mobile apps. I’m
           skilled in <b>IoT</b> (<b>Raspberry Pi</b>, <b>NodeMCU</b>) and
           currently learning <b>Go</b> while diving deeper into{' '}
-          <b>vector databases, RAG</b>.
+          <b>Langchain-js,vector databases, RAG</b>.
         </p>
       </div>
 
@@ -347,18 +347,19 @@ const CV = () => (
             </LinkPreview>
           </div>
           <div className='mt-2'>
-            <h2 className='font-semibold'>Inventory Management System</h2>
+            <h2 className='font-semibold'>ERP System (solo project)</h2>
             <div>
               <p>
-                A powerful, full-stack inventory management solution built with
-                modern technologies, focusing on performance and scalability.
+                A powerful, full-stack inventory management solution, Mini ERP built with
+                modern technologies, focusing on performance and scalability for a small
+                business.
               </p>
               <LinkPreview
                 className='underline'
                 isStatic
                 imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlu1rv29qXXBZt8M0LS4vjHYbuVFeGqEUlIWQAP'
                 quality={70}
-                url='https://github.com/devshahoriar/gco_inventory'
+                url='https://github.com/devshahoriar/gco_inventory_v2'
               >
                 Source Code
               </LinkPreview>{' '}
@@ -367,7 +368,7 @@ const CV = () => (
                 isStatic
                 imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluetLAJsf0zDZuavXKUdFQ6VkWlCg3nSEBso71'
                 quality={70}
-                url='https://gco-inventory.vercel.app/'
+                url='https://gco-inventory-v2.vercel.app/'
               >
                 Live
               </LinkPreview>
