@@ -15,7 +15,7 @@ export async function GET() {
     const pdfBuffer = await fs.readFile(pdfPath)
     const state = await fs.stat(pdfPath)
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(pdfBuffer as any, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition':

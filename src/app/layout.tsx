@@ -1,4 +1,4 @@
-import ThemeProvider from '@/provider/ThemeProvider'
+import ThemeProvider from '@/components/provider/ThemeProvider'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`antialiased ${popins.className}`}>
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+        <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange={false}>
           {children}
         </ThemeProvider>
       </body>

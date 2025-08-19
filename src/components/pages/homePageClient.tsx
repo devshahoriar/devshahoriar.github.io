@@ -5,7 +5,7 @@ import { BookUser, LaptopMinimal, Moon, Sun } from 'lucide-react'
 import { MDXRemote } from 'next-mdx-remote'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
-import { ReactNode, useRef } from 'react'
+import { useRef } from 'react'
 import { toast } from 'sonner'
 import { Button } from '../shadcn/button'
 import {
@@ -14,31 +14,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../shadcn/dropdown-menu'
-import dynamic from 'next/dynamic'
-
-export const TitleWithDescription = ({
-  children,
-  title,
-}: {
-  title: string
-  children: ReactNode
-}) => {
-  return (
-    <div className='mt-2 flex justify-between'>
-      <p className='font-medium'>{title}</p>
-      <div className='w-[350px]'>{children}</div>
-    </div>
-  )
-}
-
-export const TitleWithButtomBar = ({ title }: { title: string }) => {
-  return (
-    <div>
-      <p className='font-semibold text-xl'>{title}</p>
-      <div className='bg-slate-500 h-[3px]' />
-    </div>
-  )
-}
 
 export const PritButton = () => {
   return (
@@ -127,37 +102,5 @@ export const Code = (props: any) => {
         {props.children}
       </code>
     </>
-  )
-}
-
-function getRandomBrightHSLColor() {
-  const h = Math.floor(Math.random() * 361)
-  const s = Math.floor(Math.random() * (100 - 70) + 70)
-  const l = Math.floor(Math.random() * (100 - 60) + 60)
-  return `hsl(${h}, ${s}%, ${l}%)`
-}
-
-const NeonGradientCard = dynamic(
-  () =>
-    import('@/components/magicui/neon-gradient-card').then(
-      (x) => x.NeonGradientCard
-    ),
-  {
-    ssr: false,
-  }
-)
-
-export const GrBg = ({ children }: { children: ReactNode }) => {
-  return (
-    <NeonGradientCard
-      neonColors={{
-        firstColor: getRandomBrightHSLColor(),
-        secondColor: getRandomBrightHSLColor(),
-      }}
-      borderRadius={0}
-      borderSize={3}
-    >
-      {children}
-    </NeonGradientCard>
   )
 }
