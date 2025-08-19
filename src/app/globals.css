@@ -70,51 +70,45 @@ body {
 
 @media print {
   @page {
-    margin: 0;
+    margin: 0.3in 0.2in;
+    size: A4;
   }
 
   body {
     margin: 0;
+    font-size: 10.5pt;
+    line-height: 1.25;
+  }
+
+  section {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .print\:w-\[210mm\] {
+    width: 200mm !important;
+    max-width: 200mm !important;
+  }
+
+  /* Optimize print spacing */
+  .print\:space-y-3 > * + * {
+    margin-top: 0.75rem !important;
+  }
+
+  .print\:text-xs {
+    font-size: 0.75rem !important;
+  }
+
+  .print\:leading-tight {
+    line-height: 1.1 !important;
   }
 }
 b {
   @apply font-medium;
 }
 
-.gd {
-  background: hsla(254, 68%, 9%, 1);
 
-  background: linear-gradient(
-    45deg,
-    hsla(254, 68%, 9%, 1) 0%,
-    hsla(269, 97%, 37%, 1) 33%,
-    hsla(320, 77%, 55%, 1) 66%,
-    hsla(316, 41%, 93%, 1) 100%
-  );
 
-  background: -moz-linear-gradient(
-    45deg,
-    hsla(254, 68%, 9%, 1) 0%,
-    hsla(269, 97%, 37%, 1) 33%,
-    hsla(320, 77%, 55%, 1) 66%,
-    hsla(316, 41%, 93%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    45deg,
-    hsla(254, 68%, 9%, 1) 0%,
-    hsla(269, 97%, 37%, 1) 33%,
-    hsla(320, 77%, 55%, 1) 66%,
-    hsla(316, 41%, 93%, 1) 100%
-  );
-}
-
-@layer base {
-  .theme {
-    --animate-background-position-spin: background-position-spin 3000ms infinite alternate;
-    --animate-grid: grid 15s linear infinite;
-  }
-}
 
 @layer base {
   * {
@@ -122,24 +116,5 @@ b {
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@theme inline {
-  @keyframes background-position-spin {
-  0% {
-    background-position: top center;
-    }
-  100% {
-    background-position: bottom center;
-    }
-  }
-  @keyframes grid {
-  0% {
-    transform: translateY(-50%);
-    }
-  100% {
-    transform: translateY(0);
-    }
   }
 }

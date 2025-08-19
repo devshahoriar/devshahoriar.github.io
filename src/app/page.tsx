@@ -1,63 +1,22 @@
 import {
-  GrBg,
   ModeToggle,
   PritButton,
-  TitleWithButtomBar,
-  TitleWithDescription,
 } from '@/components/pages/homePageClient'
 import { Button } from '@/components/shadcn/button'
-import { LinkPreview } from '@/components/ui/link-preview'
-import { Github, HomeIcon, Linkedin, Mail, Phone } from 'lucide-react'
-import Image from 'next/image'
+import { Github, Mail, Phone, MapPin, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
-      <div className='flex justify-center  items-center print:hidden'>
-        <div>
-          <div className='flex justify-center mt-20 print:hidden md:hidden'>
-            <Image
-              alt='profile'
-              src={'https://github.com/devshahoriar.png'}
-              height={500}
-              width={500}
-              className='size-60 object-cover rounded-full'
-            />
-          </div>
-          <h1 className='text-center text-2xl font-semibold mt-5'>
-            Shahoriar Ahmed
-          </h1>
-          <p className='text-center text-[14px] font-light'>
-            Full stack web developer
-            <br /> specialized in MERN stack
+      {/* Mobile/Web Preview */}
+      <div className='flex justify-center items-center print:hidden py-8'>
+        <div className='text-center'>
+          <h1 className='text-2xl font-semibold'>Shahoriar Ahmed</h1>
+          <p className='text-sm text-gray-600 mt-2'>
+            Lead Software Engineer @GCO | Building LLM-powered AI Agents
           </p>
-          <div className='space-y-1 mt-4 md:hidden print:hidden'>
-            <div className='flex items-center gap-4 justify-center'>
-              <Mail size={14} />
-              <a className='hover:underline' href='mailto:shuvo1556@gmail.com'>
-                shuvo1556@gmail.com
-              </a>
-            </div>
-            <div className='flex items-center gap-4 justify-center'>
-              <Phone size={14} />
-              <a className='hover:underline' href='tel:+8801777596337'>
-                +8801777596337
-              </a>
-            </div>
-            <div className='flex gap-4 items-center'>
-              <Github size={14} />
-              <a
-                className='hover:underline'
-                href='https://github.com/devshahoriar'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                github.com/devshahoriar
-              </a>
-            </div>
-          </div>
-          <div className='flex items-center gap-3 mt-3'>
+          <div className='flex items-center gap-3 mt-4 justify-center'>
             <ModeToggle />
             <PritButton />
             <Button asChild variant='outline' size={'sm'}>
@@ -67,345 +26,210 @@ export default function Home() {
         </div>
       </div>
 
-      {/* //main cv section */}
-      <section className='mx-auto md:flex my-10 print:my-0 h-[1320px] w-[1020px] hidden print:flex'>
-        <GrBg>
-          <div className='h-[1320px] w-[1020px] flex'>
-            {/* // cv sidebar */}
-            <CvSide />
-            {/* //cv description */}
-            <CV />
-          </div>
-        </GrBg>
+      {/* ATS-Friendly Resume Section */}
+      <section className='mx-auto max-w-4xl my-8 print:my-0 print:max-w-none bg-white text-black print:text-black hidden md:block print:block print:w-[210mm]'>
+        <div className='p-8 print:px-4 print:py-3'>
+          <ATSResume />
+        </div>
       </section>
     </>
   )
 }
 
-const CvSide = () => {
+const ATSResume = () => {
   return (
-    <aside className='w-[350px] bg-[#494949]  bg-opacity-15 print:dark:bg-opacity-15 print:bg-opacity-15 dark:bg-opacity-15'>
-      <div className='mx-4 mt-8'>
-        <div className='flex justify-center'>
-          <Image
-            alt='profile'
-            src={'https://github.com/devshahoriar.png'}
-            height={500}
-            width={500}
-            className='size-60 object-cover rounded-full'
-          />
-        </div>
-        <div className='mt-5'>
-          <h1 className='text-center text-2xl font-semibold'>
-            Shahoriar Ahmed
-          </h1>
-          <p className='text-center mt-2 text-[15px]'>
-            Full stack web developer
-            <br /> specialized in MERN stack
-          </p>
-        </div>
-
-        <div className='mt-4'>
-          <TitleWithBar title='Contact' />
-          <div className='flex flex-col gap-5 mt-5 mx-2'>
-            <div className='flex items-center gap-4'>
-              <Mail size={16} />
-              <a className='hover:underline' href='mailto:shuvo1556@gmail.com'>
-                shuvo1556@gmail.com
-              </a>
-            </div>
-            <div className='flex items-center gap-4'>
-              <Phone size={16} />
-              <a className='hover:underline' href='tel:+8801777596337'>
-                +8801777596337
-              </a>
-            </div>
-            <div className='flex gap-4'>
-              <HomeIcon size={16} />
-              <p>
-                Bagha, Rajshahi <br />
-                Bangladesh
-              </p>
-            </div>
-            {/* <div className="flex gap-4 items-center">
-                  <Calendar size={16} />
-                  <p>14-dec 1999</p>
-                </div> */}
-            <div className='flex gap-4 items-center'>
-              <Github size={16} />
-
-              <LinkPreview
-                className='hover:underline'
-                isStatic
-                url='https://github.com/devshahoriar?tab=repositories'
-                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlu0Dx6aVTJ7OTVPYZ3D5uwXBhKGxzQ2tkL1CyN'
-              >
-                github.com/devshahoriar
-              </LinkPreview>
-            </div>
-            <div className='flex gap-4 items-center'>
-              <Linkedin size={16} />
-
-              <LinkPreview
-                className='hover:underline'
-                isStatic
-                url='https://www.linkedin.com/in/devshahoriar/'
-                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluuokbYG7csPwhnjrFHz6bmS90QZCydKLBMp3D'
-              >
-                linkedin.com/in/devshahoriar
-              </LinkPreview>
-            </div>
+    <div className='space-y-5 print:space-y-3'>
+      {/* Header */}
+      <header className='text-center border-b border-gray-300 pb-4 print:pb-2'>
+        <h1 className='text-3xl font-bold text-black mb-2 print:text-xl print:mb-1 print:leading-tight'>SHAHORIAR AHMED</h1>
+        <p className='text-lg text-gray-700 mb-3 print:text-sm print:mb-1'>Lead Software Engineer @GCO | Building LLM-powered AI Agents</p>
+        <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-600 print:gap-3 print:text-xs'>
+          <div className='flex items-center gap-1'>
+            <Mail size={14} className='print:w-3 print:h-3' />
+            <span>shuvo1556@gmail.com</span>
+          </div>
+          <div className='flex items-center gap-1'>
+            <Phone size={14} className='print:w-3 print:h-3' />
+            <span>+8801777596337</span>
+          </div>
+          <div className='flex items-center gap-1'>
+            <MapPin size={14} className='print:w-3 print:h-3' />
+            <span>Rajshahi</span>
+          </div>
+          <div className='flex items-center gap-1'>
+            <Github size={14} className='print:w-3 print:h-3' />
+            <span>github.com/devshahoriar</span>
+          </div>
+          <div className='flex items-center gap-1'>
+            <Linkedin size={14} className='print:w-3 print:h-3' />
+            <span>linkedin.com/in/devshahoriar</span>
           </div>
         </div>
+      </header>
 
-        <div className='mt-8'>
-          <TitleWithBar title='Skills' />
-          <div className='space-y-2'>
-            <p>
-              Programming Languages: Typescript, Javascript (proficient). GO,
-              Python (knowledge)
-            </p>
-            <p>
-              Frameworks: NextJs, Expo, ExpressJs, HonoJS (proficient). NestJS,
-              Gin (knowledge)
-            </p>
-            <p>Databases: MySql,Postgres(proficient). MongoDb (knowledge)</p>
-            <p>Version Control: Git, GitHub</p>
-            <p>
-              Other Tools & Technologies: Docker, OAuth, JWT, Rest Framework,
-              Linux Terminal, AWS, Digital Ocean, Vultr, Heroku (cloud
-              technologies)
-            </p>
-          </div>
-        </div>
-
-        <div className='mt-8'>
-          <TitleWithBar title='Quelites' />
-          <div className='mx-2 flex flex-col gap-4 mt-5'>
-            <div className='flex items-center gap-3'>
-              <div className='size-4 bg-slate-500' />
-              <p>Passion for coding</p>
-            </div>
-
-            <div className='flex items-center gap-3'>
-              <div className='size-4 bg-slate-500' />
-              <p>Self learning capability</p>
-            </div>
-
-            <div className='flex items-center gap-3'>
-              <div className='size-4 bg-slate-500' />
-              <p>Team work</p>
-            </div>
-
-            <div className='flex items-center gap-3'>
-              <div className='size-4 bg-slate-500' />
-              <p>Hard work</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
-  )
-}
-
-const CV = () => (
-  <div className='flex-1 dark:bg-[#1a1a1a] print:dark:bg-white print:dark:text-black'>
-    <div className='mx-4 mt-8'>
-      <div>
-        <TitleWithButtomBar title='Education' />
-
-        <TitleWithDescription title='2021-Now'>
-          <h2 className='font-bold'>
-            B.Sc in Computer Science and Engineering
-          </h2>
-          <p className='font-light'>Varendra University,Rajshahi</p>
-          <p className='font-light'>
-            Final Project: Full stack Gym Management system
-          </p>
-        </TitleWithDescription>
-      </div>
-
-      <div>
-        <TitleWithButtomBar title='Experience' />
-        <TitleWithDescription title='2021-2023'>
-          <h2 className='font-bold'>
-            Front end developer at Xemiron IT Solutions
-          </h2>
-          <p className='font-light'>Vodra, Rajshahi</p>
-        </TitleWithDescription>
-
-        <TitleWithDescription title='2023-Now'>
-          <h2 className='font-bold'>
-            Junior full stack developer at Global Community Organization
-          </h2>
-          <p className='font-light'>Bagha, Rajshahi</p>
-        </TitleWithDescription>
-      </div>
-
-      <div>
-        <TitleWithButtomBar title='Courses' />
-        <TitleWithDescription title='2022'>
-          <h2 className='font-bold'>Think in a Redux way Course</h2>
-          <p className='font-light'>React Redux,Redux toolkit</p>
-          <div className='font-light'>
-            89.29% marks obtained -{' '}
-            <LinkPreview
-              target='_blank'
-              className='underline'
-              isStatic
-              imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluXw4FWColzn6cghwTt3jROD2Miy0IxqUEWCum'
-              url='https://learnwithsumit.com/certificates/verify/LWSCTXN-VWWQ9WRM'
-              quality={70}
-            >
-              Report
-            </LinkPreview>
-          </div>
-        </TitleWithDescription>
-        <TitleWithDescription title='2022'>
-          <h2 className='font-bold'>Reactive Accelerator</h2>
-          <p className='font-light'>React Advanced, Next js, Mongo db</p>
-          <div className='font-light'>
-            85.15% marks obtained -{' '}
-            <LinkPreview
-              target='_blank'
-              className='underline'
-              isStatic
-              imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlupA7W4KDi9Z5ahQqNfrj4YgJOKD8Gcy1B0Spd'
-              url='https://learnwithsumit.com/certificates/verify/LWSCTXN-H6Z6UACJ'
-              quality={70}
-            >
-              Report
-            </LinkPreview>
-          </div>
-        </TitleWithDescription>
-        <TitleWithDescription title='2025'>
-          <h2 className='font-bold'>
-            Job Roles in the Cloud & Cloud Essentials Knowledge
-          </h2>
-
-          <div className='font-light'>
-            A+{' '}
-            <LinkPreview
-              target='_blank'
-              className='underline'
-              isStatic
-              imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluzyt0pyEwp2gkSXGOIYEy9qoHK0Jtv8jdNhc5'
-              url='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluEPJpFku1PSn3AjaRpWHmy8TfewO2xDJkrq0l'
-              quality={70}
-            >
-              Link
-            </LinkPreview>
-          </div>
-        </TitleWithDescription>
-      </div>
-
-      <div>
-        <TitleWithButtomBar title='A few word about myself' />
-        <p className='mt-1 text-justify'>
-          I am a self-taught, passionate full-stack web developer specializing
-          in the <b>MERN</b> stack. I build scalable applications with{' '}
-          <b>Node.js</b>, <b>Express.js</b>, and databases like <b>MongoDB</b>,{' '}
-          <b>MySQL</b>, and <b>PostgreSQL</b>, alongside responsive{' '}
-          <b>React.js</b> frontends and full-stack <b>Next.js</b> projects.
-          Recently, I completed the full web app infrastructure for three
-          organizations, including web servers, websites, and mobile apps. I’m
-          skilled in <b>IoT</b> (<b>Raspberry Pi</b>, <b>NodeMCU</b>) and
-          currently learning <b>Go</b> while diving deeper into{' '}
-          <b>Langchain-js,vector databases, RAG</b>.
+      {/* Professional Summary */}
+      <section>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3 print:text-lg print:mb-2'>PROFESSIONAL SUMMARY</h2>
+        <p className='text-gray-700 leading-relaxed text-justify print:text-xs print:leading-tight'>
+          Self-taught, passionate full-stack web developer with 4+ years of experience specializing in the MERN stack. 
+          Proven track record of building scalable applications with Node.js, Express.js, and databases like MongoDB, 
+          MySQL, and PostgreSQL, alongside responsive React.js frontends and full-stack Next.js projects. Successfully 
+          completed full web app infrastructure for three organizations, including web servers, websites, and mobile apps. 
+          Skilled in IoT (Raspberry Pi, NodeMCU) and currently expanding expertise in cutting-edge technologies including 
+          AI agents, Langchain.js, vector databases, RAG (Retrieval-Augmented Generation), and Apache Kafka for event-driven architectures.
         </p>
-      </div>
+      </section>
 
-      <div className='mt-2'>
-        <TitleWithButtomBar title='Projects' />
-        <div className='mt-2'>
-          <h2 className='font-semibold'>Global Community Organization App </h2>
-          <p className='text-sm'>
-            Technologies: Next.js, TypeScript, NextAuth, PostgreSQL, Shadcn/ui.
-          </p>
-          <div className='text-justify'>
-            <b>Solely developed</b> a full-stack application from front-end to
-            back-end and database, powering an entire office's operations.
-            Implemented secure user authentication, admin controls, and
-            real-time analytics, managing over <b>300,000</b> tree records,{' '}
-            <b>50,000+</b> child records, and continuously growing data.
-            Supports <b>80+</b> employees with daily report generation.
-            Strengthened expertise in end-to-end development and mission-driven
-            solutions.{' '}
-            <span className='text-xs'>
-              Due to the project’s private nature, I cannot share the source
-              code,
-            </span>
-            {'  '}
-            <LinkPreview
-              className='underline'
-              isStatic
-              imageSrc='https://res.cloudinary.com/dow1abm8v/image/upload/v1750774514/myImages/u1aqamedciiryakr0xhb.png'
-              url='https://devshahoriar.vercel.app/blog/gco-tree-count-app'
-              quality={70}
-            >
-              Blog
-            </LinkPreview>
+      {/* Technical Skills */}
+      <section>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3 print:text-lg print:mb-2'>TECHNICAL SKILLS</h2>
+        <div className='grid grid-cols-1 md:grid-cols-2 print:grid-cols-3 gap-3 text-sm print:gap-2 print:text-xs'>
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>Programming Languages:</h3>
+            <p className='text-gray-700 print:leading-tight'>TypeScript, JavaScript (Proficient) | Go, Python (Knowledge)</p>
           </div>
-          <div className='mt-2'>
-            <h2 className='font-semibold'>ERP System (solo project)</h2>
-            <div>
-              <p>
-                A powerful, full-stack inventory management solution, Mini ERP built with
-                modern technologies, focusing on performance and scalability for a small
-                business.
-              </p>
-              <LinkPreview
-                className='underline'
-                isStatic
-                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlu1rv29qXXBZt8M0LS4vjHYbuVFeGqEUlIWQAP'
-                quality={70}
-                url='https://github.com/devshahoriar/gco_inventory_v2'
-              >
-                Source Code
-              </LinkPreview>{' '}
-              <LinkPreview
-                className='underline'
-                isStatic
-                imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUluetLAJsf0zDZuavXKUdFQ6VkWlCg3nSEBso71'
-                quality={70}
-                url='https://gco-inventory-v2.vercel.app/'
-              >
-                Live
-              </LinkPreview>
-            </div>
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>Frameworks & Libraries:</h3>
+            <p className='text-gray-700 print:leading-tight'>Next.js, React.js, Express.js, Expo, Hono.js (Proficient) | NestJS, Gin (Knowledge)</p>
           </div>
-
-          <div className='mt-3'>
-            Developed multiple proprietary web projects for organizations and
-            startups over 4 years, leveraging my full-stack expertise. Check out
-            my open-source projects on{' '}
-            <LinkPreview
-              className='underline'
-              isStatic
-              url='https://github.com/devshahoriar?tab=repositories'
-              imageSrc='https://ion71pbmpa.ufs.sh/f/CIk0kzmBLUlu0Dx6aVTJ7OTVPYZ3D5uwXBhKGxzQ2tkL1CyN'
-            >
-              Github
-            </LinkPreview>
-            .
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>AI & Machine Learning:</h3>
+            <p className='text-gray-700 print:leading-tight'>Langchain.js, LangGraph, AI Agents, Vector Databases, RAG (Retrieval-Augmented Generation)</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>Databases:</h3>
+            <p className='text-gray-700 print:leading-tight'>MySQL, PostgreSQL, MongoDB</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>Message Queues & Streaming:</h3>
+            <p className='text-gray-700 print:leading-tight'>Apache Kafka, Event-Driven Architecture</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>Tools & Technologies:</h3>
+            <p className='text-gray-700 print:leading-tight'>Docker, OAuth, JWT, REST APIs, Git, GitHub, Linux Terminal</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>Cloud Platforms:</h3>
+            <p className='text-gray-700 print:leading-tight'>AWS, Digital Ocean, Vultr, Heroku</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-black mb-1 print:mb-0'>IoT & Hardware:</h3>
+            <p className='text-gray-700 print:leading-tight'>Raspberry Pi, NodeMCU</p>
           </div>
         </div>
-      </div>
-      <a
-        className='print:block text-xs underline mt-1 hidden'
-        href='https://devshahoriar.vercel.app/'
-      >
-        Goto Online Version
-      </a>
-    </div>
-  </div>
-)
+      </section>
 
-const TitleWithBar = ({ title }: { title: string }) => {
-  return (
-    <div className='flex items-center'>
-      <p className='font-semibold text-xl'>{title}</p>
-      <div className='bg-slate-500 h-[6px] flex-1 ml-5' />
+      {/* Professional Experience */}
+      <section>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3 print:text-lg print:mb-2'>PROFESSIONAL EXPERIENCE</h2>
+        
+        <div className='mb-4 print:mb-2'>
+          <div className='flex justify-between items-start mb-1'>
+            <h3 className='font-bold text-black print:text-sm'>Junior Full Stack Developer</h3>
+            <span className='text-sm text-gray-600 print:text-xs'>2023 - Present</span>
+          </div>
+          <p className='text-sm text-gray-600 mb-2 print:text-xs print:mb-1'>Global Community Organization | Bagha, Rajshahi</p>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 print:text-xs print:space-y-0 print:leading-tight'>
+            <li>Solely developed a full-stack application powering entire office operations</li>
+            <li>Implemented secure user authentication, admin controls, and real-time analytics</li>
+            <li>Manage over 300,000 tree records and 50,000+ child records with continuously growing data</li>
+            <li>Support 80+ employees with daily/monthly report generation and data management</li>
+          </ul>
+        </div>
+
+        <div>
+          <div className='flex justify-between items-start mb-1'>
+            <h3 className='font-bold text-black print:text-sm'>Front End Developer</h3>
+            <span className='text-sm text-gray-600 print:text-xs'>2021 - 2023</span>
+          </div>
+          <p className='text-sm text-gray-600 mb-2 print:text-xs print:mb-1'>Xemiron IT Solutions | Vodra, Rajshahi</p>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 print:text-xs print:space-y-0 print:leading-tight'>
+            <li>Developed responsive web applications using modern JavaScript frameworks</li>
+            <li>Collaborated with design and backend teams to deliver pixel-perfect user interfaces</li>
+            <li>Optimized application performance and ensured cross-browser compatibility</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3'>EDUCATION</h2>
+        <div>
+          <div className='flex justify-between items-start mb-1'>
+            <h3 className='font-bold text-black'>B.Sc in Computer Science and Engineering</h3>
+            <span className='text-sm text-gray-600'>2021 - 2025</span>
+          </div>
+          <p className='text-sm text-gray-600 mb-1'>Varendra University, Rajshahi</p>
+          <p className='text-sm text-gray-700'>Final Project: Full Stack Gym Management System</p>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3'>CERTIFICATIONS</h2>
+        <div className='space-y-3 text-sm'>
+          <div>
+            <h3 className='font-semibold text-black'>Job Roles in the Cloud & Cloud Essentials Knowledge</h3>
+            <p className='text-gray-600'>Grade: A+ | 2025</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-black'>Reactive Accelerator</h3>
+            <p className='text-gray-600'>React Advanced, Next.js, MongoDB | Score: 85.15% | 2022</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-black'>Think in a Redux Way Course</h3>
+            <p className='text-gray-600'>React Redux, Redux Toolkit | Score: 89.29% | 2022</p>
+          </div>
+        </div>
+      </section>
+<br />
+
+      {/* Key Projects */}
+      <section>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3'>KEY PROJECTS</h2>
+        
+        <div className='mb-4'>
+          <h3 className='font-bold text-black mb-1'>Global Community Organization App</h3>
+          <p className='text-sm text-gray-600 mb-2'>Technologies: Next.js, TypeScript, NextAuth, PostgreSQL, Shadcn/ui</p>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1'>
+            <li>Full-stack application from front-end to back-end and database</li>
+            <li>Secure user authentication, admin controls, and real-time analytics</li>
+            <li>Manages 300,000+ tree records and 50,000+ child records</li>
+            <li>Supports 80+ employees with daily report generation</li>
+          </ul>
+        </div>
+
+        <div className='mb-4'>
+          <h3 className='font-bold text-black mb-1'>ERP System (Solo Project)</h3>
+          <p className='text-sm text-gray-600 mb-2'>Full-stack inventory management solution for small business</p>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1'>
+            <li>Built with modern technologies focusing on performance and scalability</li>
+            <li>Complete inventory management with user authentication and role-based access</li>
+            <li>Live Demo: gco-inventory-v2.vercel.app</li>
+            <li>Source Code: github.com/devshahoriar/gco_inventory_v2</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Core Competencies */}
+      <section>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3'>CORE COMPETENCIES</h2>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-gray-700'>
+          <div>• Passion for coding</div>
+          <div>• Self-learning capability</div>
+          <div>• Team collaboration</div>
+          <div>• Problem-solving</div>
+          <div>• End-to-end development</div>
+          <div>• Scalable architecture</div>
+          <div>• Database optimization</div>
+          <div>• API development</div>
+          <div>• AI integration</div>
+          <div>• Event-driven systems</div>
+          <div>• Vector search</div>
+          <div>• Real-time analytics</div>
+        </div>
+      </section>
     </div>
   )
 }
+
