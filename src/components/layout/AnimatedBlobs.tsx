@@ -3,7 +3,6 @@
 import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
 
-  // Array of different color combinations
   const colorPalettes = [
     'bg-gradient-to-r from-blue-400/40 to-purple-600/40',
     'bg-gradient-to-r from-purple-400/35 to-pink-600/35',
@@ -34,11 +33,8 @@ const AnimatedBlobs = () => {
 
   useEffect(() => {
     setMounted(true)
-
-    // Generate random blobs
     const generateBlobs = () => {
       const newBlobs = []
-      // Define grid-like areas to ensure better distribution
       const areas = [
         { x: [5, 25], y: [5, 25] }, // top-left
         { x: [30, 50], y: [5, 25] }, // top-center
@@ -69,13 +65,6 @@ const AnimatedBlobs = () => {
     }
 
     generateBlobs()
-
-    // Regenerate blobs every 30 seconds for variety
-    const interval = setInterval(generateBlobs, 30000)
-
-    return () => {
-      clearInterval(interval)
-    }
   }, [])
 
   if (!mounted) return null

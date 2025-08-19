@@ -4,6 +4,7 @@ import { Button } from '@/components/shadcn/button'
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const Navbar = () => {
@@ -46,8 +47,8 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/50 backdrop-blur-md border-b border-border'
+        isScrolled || isMobileMenuOpen
+          ? 'backdrop-blur-[6px] border-b border-border'
           : 'bg-transparent'
       }`}
     >
@@ -60,9 +61,12 @@ const Navbar = () => {
             transition={{ delay: 0.3 }}
             className='flex-shrink-0'
           >
-            <span className='text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent'>
+            <Link
+              href='/'
+              className='text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent'
+            >
               @devshahoriar
-            </span>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -123,7 +127,7 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className='md:hidden bg-background/95 backdrop-blur-md border-t border-border'
+              className='md:hidden backdrop-blur-[6px]'
             >
               <div className='px-2 pt-2 pb-3 space-y-1'>
                 {navItems.map((item, index) => (

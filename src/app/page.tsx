@@ -10,7 +10,7 @@ import AnimatedBlobs from '@/components/layout/AnimatedBlobs'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background relative">
+    <main className="min-h-screen bg-background relative overflow-x-hidden">
       <AnimatedBlobs />
       <div className="relative z-20">
         <Navbar />

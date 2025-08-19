@@ -24,7 +24,7 @@ const HeroSection = () => {
       <InteractiveGridPattern
         className={cn(
           '[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]',
-          'inset-x-[50%] inset-y-0 h-[100%] skew-y-12'
+          'md:inset-x-[50%]  md:inset-y-0 h-[100%] skew-y-12 opacity-50 md:opacity-100'
         )}
       />
 
@@ -96,7 +96,7 @@ const HeroSection = () => {
               <Button
                 size='lg'
                 onClick={() => scrollToSection('#contact')}
-                className='bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 hover:from-blue-700 hover:via-purple-700 hover:to-blue-800 text-white dark:text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0'
+                className='bg-gradient-to-r from-black  to-blue-700  text-white dark:text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0 hover:opacity-90'
               >
                 Get In Touch
               </Button>
@@ -164,7 +164,7 @@ const HeroSection = () => {
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className='relative'
+              className='relative pb-10 md:pb-0'
             >
               <div className='relative w-80 h-80 md:w-96 md:h-96'>
                 {/* Gradient Ring */}
@@ -223,7 +223,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
+          className='absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block'
         >
           <motion.button
             onClick={() => scrollToSection('#about')}
