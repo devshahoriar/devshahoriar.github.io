@@ -131,17 +131,18 @@ const Navbar = () => {
             >
               <div className='px-2 pt-2 pb-3 space-y-1'>
                 {navItems.map((item, index) => (
-                  <motion.button
+                  <motion.a
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ delay: index * 0.1 }}
+                    href={item.href}
                     onClick={() => scrollToSection(item.href)}
                     className='text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200 hover:bg-accent'
                   >
                     {item.name}
-                  </motion.button>
+                  </motion.a>
                 ))}
               </div>
             </motion.div>

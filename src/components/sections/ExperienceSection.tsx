@@ -77,7 +77,7 @@ const ExperienceSection = () => {
           {/* Timeline */}
           <div className='relative'>
             {/* Timeline Line */}
-            <div className='absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-blue-600'></div>
+            <div className='absolute md:left-8 left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-blue-600'></div>
 
             {experiences.map((experience, index) => (
               <motion.div
@@ -89,15 +89,15 @@ const ExperienceSection = () => {
                 className='relative mb-12 last:mb-0'
               >
                 {/* Timeline Dot */}
-                <div className='absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10'>
+                <div className='absolute md:left-6 left-[5px] w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10'>
                   {experience.current && (
                     <div className='absolute inset-0 bg-primary rounded-full animate-ping'></div>
                   )}
                 </div>
 
                 {/* Experience Card */}
-                <div className='ml-20'>
-                  <Card className='p-6 hover:shadow-lg transition-all duration-300 group'>
+                <div className='md:ml-20 ml-7'>
+                  <Card className='md:p-6 p-4 hover:shadow-lg transition-all duration-300 group'>
                     <CardContent className='p-0 space-y-4'>
                       {/* Header */}
                       <div className='flex flex-col md:flex-row md:items-start md:justify-between gap-4'>

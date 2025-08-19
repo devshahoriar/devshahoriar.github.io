@@ -7,14 +7,14 @@ import { ArrowDown, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 
-const HeroSection = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+const scrollToSection = (href: string) => {
+  const element = document.querySelector(href)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
   }
+}
 
+const HeroSection = () => {
   return (
     <section
       id='home'
@@ -24,7 +24,7 @@ const HeroSection = () => {
       <InteractiveGridPattern
         className={cn(
           '[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]',
-          'md:inset-x-[50%]  md:inset-y-0 h-[100%] skew-y-12 opacity-50 md:opacity-100'
+          'md:inset-x-[50%]  md:inset-y-0 h-[100%] skew-y-12 opacity-50 md:opacity-100 -z-[1]'
         )}
       />
 
