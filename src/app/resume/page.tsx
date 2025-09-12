@@ -1,6 +1,6 @@
 import { ModeToggle, PritButton } from '@/components/pages/homePageClient'
 import { Button } from '@/components/shadcn/button'
-import { Github, Mail, Phone, MapPin, Linkedin } from 'lucide-react'
+import { Github, Globe, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {
@@ -44,7 +44,7 @@ const ATSResume = () => {
         <p className='text-lg text-gray-700 mb-3 print:text-sm print:mb-1'>
           Lead Software Engineer @GCO | Building LLM-powered AI Agents
         </p>
-        <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-600 print:gap-3 print:text-xs'>
+        <div className='flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-gray-600 print:gap-3 print:text-xs'>
           <div className='flex items-center gap-1'>
             <Mail size={14} className='print:w-3 print:h-3' />
             <span>shuvo1556@gmail.com</span>
@@ -61,6 +61,12 @@ const ATSResume = () => {
             <Github size={14} className='print:w-3 print:h-3' />
             <span>github.com/devshahoriar</span>
           </div>
+          
+          <div className='flex items-center gap-1'>
+            <Globe size={14} className='print:w-3 print:h-3' />
+            <span>devshahoriar.vercel.app</span>
+          </div>
+
           <div className='flex items-center gap-1'>
             <Linkedin size={14} className='print:w-3 print:h-3' />
             <span>linkedin.com/in/devshahoriar</span>
@@ -293,7 +299,7 @@ const ATSResume = () => {
           <p className='text-sm text-gray-600 mb-2'>
             Technologies: Next.js, TypeScript, NextAuth, PostgreSQL, Shadcn/ui
           </p>
-          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1'>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 ml-5'>
             <li>
               Full-stack application from front-end to back-end and database
             </li>
@@ -308,12 +314,12 @@ const ATSResume = () => {
 
         <div className='mb-4'>
           <h3 className='font-bold text-black mb-1'>
-            ERP System (Solo Project)
+            ERP System
           </h3>
           <p className='text-sm text-gray-600 mb-2'>
             Full-stack inventory management solution for small business
           </p>
-          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1'>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 ml-5'>
             <li>
               Built with modern technologies focusing on performance and
               scalability

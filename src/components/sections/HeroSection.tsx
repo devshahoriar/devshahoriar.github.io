@@ -177,6 +177,7 @@ const HeroSection = () => {
                         fill
                         className='object-cover'
                         priority
+                        // placeholder='blur'
                       />
                     </div>
                   </div>
