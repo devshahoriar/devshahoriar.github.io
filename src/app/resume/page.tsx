@@ -264,14 +264,14 @@ const ATSResume = () => {
         <div className='space-y-3 text-sm'>
           <div>
             <h3 className='font-semibold text-black'>
-              Job Roles in the Cloud & Cloud Essentials Knowledge
+              Cloud Essentials Knowledge
             </h3>
             <p className='text-gray-600'>Grade: A+ | 2025</p>
           </div>
           <div>
             <h3 className='font-semibold text-black'>Reactive Accelerator</h3>
             <p className='text-gray-600'>
-              React Advanced, Next.js, MongoDB | Score: 85.15% | 2022
+              React Advanced, Next.js, MongoDB | Score: 85.15% | 2022 | <a className='underline' target='_blank' href='https://learnwithsumit.com/certificates/verify/LWSCTXN-H6Z6UACJ'>Link</a>
             </p>
           </div>
           <div>
@@ -279,7 +279,7 @@ const ATSResume = () => {
               Think in a Redux Way Course
             </h3>
             <p className='text-gray-600'>
-              React Redux, Redux Toolkit | Score: 89.29% | 2022
+              React Redux, Redux Toolkit | Score: 89.29% | 2022 | <a className='underline' target='_blank' href='https://learnwithsumit.com/certificates/verify/LWSCTXN-VWWQ9WRM'>Link</a>
             </p>
           </div>
         </div>
