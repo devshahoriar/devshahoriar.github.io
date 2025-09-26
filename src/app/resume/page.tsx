@@ -177,7 +177,7 @@ const ATSResume = () => {
         <div className='mb-4 print:mb-2'>
           <div className='flex justify-between items-start mb-1'>
             <h3 className='font-bold text-black print:text-sm'>
-              Junior Full Stack Developer
+              Full Stack Developer
             </h3>
             <span className='text-sm text-gray-600 print:text-xs'>
               2023 - Present
@@ -271,7 +271,7 @@ const ATSResume = () => {
               <a
                 className='underline'
                 target='_blank'
-                href='blob:https://skillbuilder.aws/380fcf7d-9489-4198-922c-a588e035c559'
+                href='https://skillbuilder.aws/380fcf7d-9489-4198-922c-a588e035c559'
               >
                 Link
               </a>
@@ -318,7 +318,7 @@ const ATSResume = () => {
         <div className='mb-4'>
           <div className='flex gap-2 items-center'>
             <h3 className='font-bold text-black mb-1'>
-              Global Community Organization App (Privet)
+              Global Community Organization App (Private)
             </h3>
             <a
               className='underline text-xs'
