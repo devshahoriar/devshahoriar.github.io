@@ -61,7 +61,7 @@ const ATSResume = () => {
             <Github size={14} className='print:w-3 print:h-3' />
             <span>github.com/devshahoriar</span>
           </div>
-          
+
           <div className='flex items-center gap-1'>
             <Globe size={14} className='print:w-3 print:h-3' />
             <span>devshahoriar.vercel.app</span>
@@ -266,12 +266,28 @@ const ATSResume = () => {
             <h3 className='font-semibold text-black'>
               Cloud Essentials Knowledge
             </h3>
-            <p className='text-gray-600'>Grade: A+ | 2025</p>
+            <p className='text-gray-600'>
+              Grade: A+ | 2025 |{' '}
+              <a
+                className='underline'
+                target='_blank'
+                href='blob:https://skillbuilder.aws/380fcf7d-9489-4198-922c-a588e035c559'
+              >
+                Link
+              </a>
+            </p>
           </div>
           <div>
             <h3 className='font-semibold text-black'>Reactive Accelerator</h3>
             <p className='text-gray-600'>
-              React Advanced, Next.js, MongoDB | Score: 85.15% | 2022 | <a className='underline' target='_blank' href='https://learnwithsumit.com/certificates/verify/LWSCTXN-H6Z6UACJ'>Link</a>
+              React Advanced, Next.js, MongoDB | Score: 85.15% | 2022 |{' '}
+              <a
+                className='underline'
+                target='_blank'
+                href='https://learnwithsumit.com/certificates/verify/LWSCTXN-H6Z6UACJ'
+              >
+                Link
+              </a>
             </p>
           </div>
           <div>
@@ -279,7 +295,14 @@ const ATSResume = () => {
               Think in a Redux Way Course
             </h3>
             <p className='text-gray-600'>
-              React Redux, Redux Toolkit | Score: 89.29% | 2022 | <a className='underline' target='_blank' href='https://learnwithsumit.com/certificates/verify/LWSCTXN-VWWQ9WRM'>Link</a>
+              React Redux, Redux Toolkit | Score: 89.29% | 2022 |{' '}
+              <a
+                className='underline'
+                target='_blank'
+                href='https://learnwithsumit.com/certificates/verify/LWSCTXN-VWWQ9WRM'
+              >
+                Link
+              </a>
             </p>
           </div>
         </div>
@@ -291,11 +314,20 @@ const ATSResume = () => {
         <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3'>
           PROJECTS
         </h2>
-
+        {/* project 1 */}
         <div className='mb-4'>
-          <h3 className='font-bold text-black mb-1'>
-            Global Community Organization App
-          </h3>
+          <div className='flex gap-2 items-center'>
+            <h3 className='font-bold text-black mb-1'>
+              Global Community Organization App (Privet)
+            </h3>
+            <a
+              className='underline text-xs'
+              target='_blank'
+              href='https://devshahoriar.vercel.app/blog/gco-tree-count-app'
+            >
+              Blog
+            </a>
+          </div>
           <p className='text-sm text-gray-600 mb-2'>
             Technologies: Next.js, TypeScript, NextAuth, PostgreSQL, Shadcn/ui
           </p>
@@ -311,11 +343,26 @@ const ATSResume = () => {
             <li>Supports 80+ employees with daily report generation</li>
           </ul>
         </div>
-
+        {/* project 2 */}
         <div className='mb-4'>
-          <h3 className='font-bold text-black mb-1'>
-            ERP System
-          </h3>
+          <div className='flex gap-2 items-center'>
+            <h3 className='font-bold text-black mb-1'>ERP System</h3>
+            <a
+              className='underline text-xs'
+              target='_blank'
+              href='https://github.com/devshahoriar/two_erp'
+            >
+              Github
+            </a>
+            <a
+              className='underline text-xs'
+              target='_blank'
+              href='https://gco-inventory-v2.vercel.app/'
+            >
+              Live
+            </a>
+          </div>
+          
           <p className='text-sm text-gray-600 mb-2'>
             Full-stack inventory management solution for small business
           </p>
@@ -328,10 +375,52 @@ const ATSResume = () => {
               Complete inventory management with user authentication and
               role-based access
             </li>
-            <li>Live Demo: gco-inventory-v2.vercel.app</li>
-            <li>Source Code: github.com/devshahoriar/gco_inventory_v2</li>
+            
+            <li>Features: product management, order processing, and reporting</li>
+            <li>Multiple branches and warehouses support</li>
           </ul>
         </div>
+        {/* project 3 */}
+        <div className='mb-4'>
+          <div className='flex gap-2 items-center'>
+            <h3 className='font-bold text-black mb-1'>
+              AI-Powered E-Commerce App with Natural Language Control
+            </h3>
+            <a
+              className='underline text-xs'
+              target='_blank'
+              href='https://github.com/devshahoriar/shop-agent'
+            >
+              Github
+            </a>
+            <a
+              className='underline text-xs'
+              target='_blank'
+              href='https://www.youtube.com/watch?v=69i_wSIV8j4'
+            >
+              Video
+            </a>
+          </div>
+          <p className='text-sm text-gray-600 mb-2'>
+            Technologies: Next.js, tRPC, Hono, Prisma, LangChain.js, Google Gemini AI, Socket.io
+          </p>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 ml-5'>
+            <li>
+              Revolutionary e-commerce interface controlled entirely through natural language commands
+            </li>
+            <li>
+              Voice-to-action functionality: "Search for gold product", "Add first product to cart"
+            </li>
+            <li>
+              Real-time UI updates using Socket.io for instant user interactions
+            </li>
+            <li>
+              Type-safe client-server communication with tRPC and SEO-optimized SSR product pages
+            </li>
+          </ul>
+        </div>
+
+
       </section>
 
       {/* Core Competencies */}
