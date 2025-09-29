@@ -11,7 +11,7 @@ export default function Home() {
         <div className='text-center'>
           <h1 className='text-2xl font-semibold'>Shahoriar Ahmed</h1>
           <p className='text-sm text-gray-600 mt-2'>
-            Lead Software Engineer @GCO | Building LLM-powered AI Agents
+            Full Stack Developer @GCO | Building LLM-powered AI Agents
           </p>
           <div className='flex items-center gap-3 mt-4 justify-center'>
             <ModeToggle />
@@ -42,7 +42,7 @@ const ATSResume = () => {
           SHAHORIAR AHMED
         </h1>
         <p className='text-lg text-gray-700 mb-3 print:text-sm print:mb-1'>
-          Lead Software Engineer @GCO | Building LLM-powered AI Agents
+          Full Stack Developer @GCO | Building LLM-powered AI Agents
         </p>
         <div className='flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-gray-600 print:gap-3 print:text-xs'>
           <div className='flex items-center gap-1'>
