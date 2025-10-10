@@ -172,9 +172,10 @@ const HeroSection = () => {
                   <div className='w-full h-full bg-background rounded-full p-4'>
                     <div className='relative w-full h-full rounded-full overflow-hidden'>
                       <Image
-                        src='/profile.jpg'
+                        src='https://avatars.githubusercontent.com/u/76418496'
                         alt='Shahoriar Ahmed'
-                        fill
+                        width={400}
+                        height={400}
                         className='object-cover'
                         priority
                         // placeholder='blur'
