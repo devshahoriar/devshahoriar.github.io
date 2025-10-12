@@ -11,7 +11,7 @@ const ExperienceSection = () => {
       title: 'Full Stack Developer',
       company: 'Global Community Organization',
       location: 'Bagha, Rajshahi',
-      period: '2023 - Present',
+      period: '2023 - 2025',
       type: 'Full-time',
       description: [
         "Solely developed a full-stack application from front-end to back-end and database, powering an entire office's operations",
@@ -36,6 +36,7 @@ const ExperienceSection = () => {
       period: '2021 - 2023',
       type: 'Part-time',
       description: [
+        'Started as an intern for the first 6 months, focusing on React.js fundamentals, React Router, and React Hooks',
         'Developed responsive web applications using React.js and modern frontend technologies',
         'Collaborated with design teams to implement pixel-perfect UI/UX designs',
         'Optimized application performance and implemented best practices',

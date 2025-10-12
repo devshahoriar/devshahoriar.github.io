@@ -6,12 +6,14 @@ const nextConfig = {
         hostname: 'github.com',
       },
       {
-        hostname:"res.cloudinary.com"
-      },{
-        hostname:'ion71pbmpa.ufs.sh'
-      },{
-        hostname:'avatars.githubusercontent.com'
-      }
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        hostname: 'ion71pbmpa.ufs.sh',
+      },
+      {
+        hostname: 'avatars.githubusercontent.com',
+      },
     ],
   },
   transpilePackages: ['next-mdx-remote'],

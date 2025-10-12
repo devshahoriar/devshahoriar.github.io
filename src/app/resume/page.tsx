@@ -11,7 +11,7 @@ export default function Home() {
         <div className='text-center'>
           <h1 className='text-2xl font-semibold'>Shahoriar Ahmed</h1>
           <p className='text-sm text-gray-600 mt-2'>
-            Full Stack Developer @GCO | Building LLM-powered AI Agents
+            Full Stack Developer | Building LLM-powered AI Agents
           </p>
           <div className='flex items-center gap-3 mt-4 justify-center'>
             <ModeToggle />
@@ -42,7 +42,7 @@ const ATSResume = () => {
           SHAHORIAR AHMED
         </h1>
         <p className='text-lg text-gray-700 mb-3 print:text-sm print:mb-1'>
-          Full Stack Developer @GCO | Building LLM-powered AI Agents
+          Full Stack Developer | Building LLM-powered AI Agents
         </p>
         <div className='flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-gray-600 print:gap-3 print:text-xs'>
           <div className='flex items-center gap-1'>
@@ -180,7 +180,7 @@ const ATSResume = () => {
               Full Stack Developer
             </h3>
             <span className='text-sm text-gray-600 print:text-xs'>
-              2023 - Present
+              2023 - 2025
             </span>
           </div>
           <p className='text-sm text-gray-600 mb-2 print:text-xs print:mb-1'>
@@ -219,6 +219,7 @@ const ATSResume = () => {
             Xemiron IT Solutions | Vodra, Rajshahi
           </p>
           <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 print:text-xs print:space-y-0 print:leading-tight'>
+            <li>Started as an intern for the first 6 months, focusing on React.js fundamentals, React Router, and React Hooks</li>
             <li>
               Developed responsive web applications using modern JavaScript
               frameworks
