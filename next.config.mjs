@@ -17,12 +17,7 @@ const nextConfig = {
     ],
   },
   transpilePackages: ['next-mdx-remote'],
-  experimental: {
-    reactCompiler: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  reactCompiler: true,
   typescript: {
     ignoreBuildErrors: true,
   },

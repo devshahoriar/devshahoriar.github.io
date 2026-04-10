@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/shadcn/button'
 import { Menu, Moon, Sun, X } from 'lucide-react'
-import { AnimatePresence, motion } from 'motion/react'
+import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -59,11 +59,11 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className='flex-shrink-0'
+            className='shrink-0'
           >
             <Link
               href='/'
-              className='text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent'
+              className='text-2xl font-bold bg-linear-to-r from-primary to-blue-600 bg-clip-text text-transparent'
             >
               @devshahoriar
             </Link>
@@ -121,33 +121,29 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className='md:hidden backdrop-blur-[6px]'
-            >
-              <div className='px-2 pt-2 pb-3 space-y-1'>
-                {navItems.map((item, index) => (
-                  <motion.a
-                    key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ delay: index * 0.1 }}
-                    href={item.href}
-                    onClick={() => scrollToSection(item.href)}
-                    className='text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200 hover:bg-accent'
-                  >
-                    {item.name}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            className='md:hidden backdrop-blur-[6px]'
+          >
+            <div className='px-2 pt-2 pb-3 space-y-1'>
+              {navItems.map((item, index) => (
+                <motion.a
+                  key={item.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  href={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className='text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200 hover:bg-accent'
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.nav>
   )

@@ -1,8 +1,11 @@
 import ThemeProvider from '@/components/provider/ThemeProvider'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const popins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -22,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning suppressContentEditableWarning>
+    <html lang='en' suppressHydrationWarning suppressContentEditableWarning className={cn("font-sans", inter.variable)}>
       <head>
         <meta name='viewport' content='initial-scale=1, width=device-width' />
         <meta
