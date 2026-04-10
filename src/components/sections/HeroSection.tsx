@@ -24,7 +24,7 @@ const HeroSection = () => {
       <InteractiveGridPattern
         className={cn(
           '[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]',
-          'md:inset-x-[50%]  md:inset-y-0 h-[100%] skew-y-12 opacity-50 md:opacity-100 -z-[1]'
+          'md:inset-x-[50%]  md:inset-y-0 h-[100%] skew-y-12 opacity-50 md:opacity-100 -z-[1]',
         )}
       />
 
@@ -78,11 +78,21 @@ const HeroSection = () => {
               </div>
               <div className='flex items-center gap-2'>
                 <Mail className='w-4 h-4' />
-                <span>shuvo1556@gmail.com</span>
+                <a
+                  href='mailto:shuvo1556@gmail.com'
+                  className='transition-colors duration-200 hover:text-primary hover:underline underline-offset-4 dark:hover:text-blue-400'
+                >
+                  shuvo1556@gmail.com
+                </a>
               </div>
               <div className='flex items-center gap-2'>
                 <Phone className='w-4 h-4' />
-                <span>+880 1777 596337</span>
+                <a
+                  href='tel:+8801777596337'
+                  className='transition-colors duration-200 hover:text-primary hover:underline underline-offset-4 dark:hover:text-blue-400'
+                >
+                  +880 1777 596337
+                </a>
               </div>
             </motion.div>
 
@@ -96,7 +106,7 @@ const HeroSection = () => {
               <Button
                 size='lg'
                 onClick={() => scrollToSection('#contact')}
-                className='bg-gradient-to-r from-black  to-blue-700  text-white dark:text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0 hover:opacity-90'
+                className='bg-linear-to-r from-black  to-blue-700  text-white dark:text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0 hover:opacity-90'
               >
                 Get In Touch
               </Button>
@@ -104,7 +114,7 @@ const HeroSection = () => {
                 variant='outline'
                 size='lg'
                 onClick={() => window.open('/api/resume', '_blank')}
-                className='px-8 py-3 text-lg font-semibold border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300'
+                className='px-8 py-3 text-lg font-semibold   text-slate-900 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300   dark:text-slate-100 dark:hover:bg-primary dark:hover:text-primary-foreground dark:hover:border-primary'
               >
                 Download CV
               </Button>
@@ -133,7 +143,7 @@ const HeroSection = () => {
                 onClick={() =>
                   window.open(
                     'https://www.linkedin.com/in/devshahoriar/',
-                    '_blank'
+                    '_blank',
                   )
                 }
                 className='w-12 h-12 p-0 hover:bg-primary/10'
