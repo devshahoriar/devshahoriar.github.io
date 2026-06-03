@@ -43,7 +43,7 @@ const SkillsSection = () => {
       icon: Smartphone,
       skills: [
         { name: 'Expo', level: 'Proficient', color: 'bg-purple-600' },
-        { name: 'React Native', level: 'Knowledge', color: 'bg-blue-400' },
+        { name: 'React Native', level: 'Proficient', color: 'bg-blue-400' },
       ],
     },
     {

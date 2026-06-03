@@ -127,4 +127,13 @@
   html {
     @apply font-sans;
   }
+  @media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    margin: 1cm;
+  }
+}
 }

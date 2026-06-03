@@ -62,7 +62,7 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            About <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Me</span>
+            About <span className="bg-linear-to-r from-primary to-blue-600 bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Passionate full-stack developer with a strong foundation in modern web technologies
@@ -87,8 +87,8 @@ const AboutSection = () => {
                   <strong> React.js</strong> frontends and full-stack <strong>Next.js</strong> projects.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Recently, I completed the full web app infrastructure for three organizations, including web servers, 
-                  websites, and mobile apps. I'm skilled in <strong>IoT</strong> (<strong>Raspberry Pi</strong>, 
+                  I also build cross-platform mobile apps with <strong>React Native</strong> and recently shipped 
+                  <strong> Examo</strong> to the Play Store. I'm skilled in <strong>IoT</strong> (<strong>Raspberry Pi</strong>, 
                   <strong>NodeMCU</strong>) and currently learning <strong>Go</strong> while diving deeper into 
                   <strong> Langchain-js, vector databases, RAG</strong>.
                 </p>

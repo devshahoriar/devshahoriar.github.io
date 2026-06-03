@@ -63,7 +63,7 @@ const Footer = () => {
                   Shahoriar Ahmed
                 </h3>
                 <p className='text-muted-foreground text-sm'>
-                  Full Stack Web Developer
+                  Software engineer
                 </p>
               </div>
               <p className='text-muted-foreground leading-relaxed max-w-md'>

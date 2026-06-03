@@ -5,53 +5,83 @@ import { Card, CardContent } from '@/components/shadcn/card'
 import { Briefcase, Building, Calendar, MapPin } from 'lucide-react'
 import { motion } from 'motion/react'
 
+const experiences = [
+  {
+    title: 'CEO & Full Stack Developer',
+    company: 'Examo',
+    location: 'Rajshahi, Bangladesh',
+    period: '2026 - Present',
+    type: 'Full-time',
+    description: [
+      'Built an exam system for Bangladeshi students and other learners',
+      'Launched leaderboards and a community feature to boost engagement',
+      'Developed AI assistance that can answer NCTB system questions',
+      'Built the full platform using Node.js, Hono, and React Native',
+    ],
+    technologies: ['Node.js', 'Hono', 'React Native', 'TanStack', 'PostgreSQL'],
+    current: true,
+  },
+  {
+    title: 'React Native Frontend Lead',
+    company: 'Deshilug',
+    location: 'Dhanmondi, Dhaka',
+    period: '2025 - Present',
+    type: 'Full-time',
+    description: [
+      'Leading the frontend team for a production React Native app',
+      'Developing and shipping features for the Play Store release',
+      'Own UI architecture, performance tuning, and code quality standards',
+    ],
+    technologies: ['React Native', 'TypeScript', 'RTK Query', 'Firebase'],
+    current: true,
+  },
+  {
+    title: 'Full Stack Developer',
+    company: 'Global Community Organization',
+    location: 'Bagha, Rajshahi',
+    period: '2023 - 2025',
+    type: 'Full-time',
+    description: [
+      "Solely developed a full-stack application from front-end to back-end and database, powering an entire office's operations",
+      'Implemented secure user authentication, admin controls, and real-time analytics',
+      'Managing over 300,000 tree records, 50,000+ child records, and continuously growing data',
+      'Supporting 80+ employees with daily report generation',
+      'Built with Next.js, TypeScript, NextAuth, PostgreSQL, and Shadcn/ui',
+    ],
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'PostgreSQL',
+      'NextAuth',
+      'Shadcn/ui',
+    ],
+    current: false,
+  },
+  {
+    title: 'Front End Developer',
+    company: 'Xemiron IT Solutions',
+    location: 'Vodra, Rajshahi',
+    period: '2021 - 2023',
+    type: 'Part-time',
+    description: [
+      'Started as an intern for the first 6 months, focusing on React.js fundamentals, React Router, and React Hooks',
+      'Developed responsive web applications using React.js and modern frontend technologies',
+      'Collaborated with design teams to implement pixel-perfect UI/UX designs',
+      'Optimized application performance and implemented best practices',
+      'Worked on multiple client projects delivering high-quality solutions',
+    ],
+    technologies: [
+      'React.js',
+      'JavaScript',
+      'HTML/CSS',
+      'Tailwind CSS',
+      'Git',
+    ],
+    current: false,
+  },
+]
+
 const ExperienceSection = () => {
-  const experiences = [
-    {
-      title: 'Full Stack Developer',
-      company: 'Global Community Organization',
-      location: 'Bagha, Rajshahi',
-      period: '2023 - 2025',
-      type: 'Full-time',
-      description: [
-        "Solely developed a full-stack application from front-end to back-end and database, powering an entire office's operations",
-        'Implemented secure user authentication, admin controls, and real-time analytics',
-        'Managing over 300,000 tree records, 50,000+ child records, and continuously growing data',
-        'Supporting 80+ employees with daily report generation',
-        'Built with Next.js, TypeScript, NextAuth, PostgreSQL, and Shadcn/ui',
-      ],
-      technologies: [
-        'Next.js',
-        'TypeScript',
-        'PostgreSQL',
-        'NextAuth',
-        'Shadcn/ui',
-      ],
-      current: true,
-    },
-    {
-      title: 'Front End Developer',
-      company: 'Xemiron IT Solutions',
-      location: 'Vodra, Rajshahi',
-      period: '2021 - 2023',
-      type: 'Part-time',
-      description: [
-        'Started as an intern for the first 6 months, focusing on React.js fundamentals, React Router, and React Hooks',
-        'Developed responsive web applications using React.js and modern frontend technologies',
-        'Collaborated with design teams to implement pixel-perfect UI/UX designs',
-        'Optimized application performance and implemented best practices',
-        'Worked on multiple client projects delivering high-quality solutions',
-      ],
-      technologies: [
-        'React.js',
-        'JavaScript',
-        'HTML/CSS',
-        'Tailwind CSS',
-        'Git',
-      ],
-      current: false,
-    },
-  ]
 
   return (
     <section id='experience' className='py-20 lg:py-32'>
@@ -65,7 +95,7 @@ const ExperienceSection = () => {
         >
           <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-4'>
             Professional{' '}
-            <span className='bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent'>
+            <span className='bg-linear-to-r from-primary to-blue-600 bg-clip-text text-transparent'>
               Experience
             </span>
           </h2>

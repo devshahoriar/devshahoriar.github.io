@@ -44,7 +44,7 @@ const HeroSection = () => {
               className='space-y-2'
             >
               <p className='text-primary font-medium tracking-wider uppercase text-sm'>
-                Full Stack Web Developer
+                Full Stack Developer
               </p>
               <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold leading-tight'>
                 <span className='block'>Hi, I'm</span>
@@ -60,9 +60,8 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className='text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed'
             >
-              Passionate MERN stack developer specializing in building scalable
-              web applications. Currently managing 300,000+ tree records and
-              serving 80+ employees daily.
+              Software engineer who built Examo using AI to deliver
+              scalable, real-world applications.
             </motion.p>
 
             {/* Contact Info */}

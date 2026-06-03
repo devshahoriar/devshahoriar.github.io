@@ -50,7 +50,7 @@ export default async function Image() {
           >
             Shahoriar Ahmed
           </h1>
-          <p style={{ textAlign: 'center' }}>Full stack web developer</p>
+          <p style={{ textAlign: 'center' }}>Software engineer</p>
           <b style={{ textAlign: 'center' }}>#nodejs #nextjs #reactjs #expo</b>
         </div>
       </div>

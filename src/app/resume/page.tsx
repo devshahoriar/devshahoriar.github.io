@@ -11,7 +11,7 @@ export default function Home() {
         <div className='text-center'>
           <h1 className='text-2xl font-semibold'>Shahoriar Ahmed</h1>
           <p className='text-sm text-gray-600 mt-2'>
-            Full Stack Developer | Building LLM-powered AI Agents
+            Software engineer | Building LLM-powered AI Agents
           </p>
           <div className='flex items-center gap-3 mt-4 justify-center'>
             <ModeToggle />
@@ -42,16 +42,16 @@ const ATSResume = () => {
           SHAHORIAR AHMED
         </h1>
         <p className='text-lg text-gray-700 mb-3 print:text-sm print:mb-1'>
-          Full Stack Developer | Building LLM-powered AI Agents
+          Software engineer | Building LLM-powered AI Agents
         </p>
         <div className='flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-gray-600 print:gap-3 print:text-xs'>
           <div className='flex items-center gap-1'>
             <Mail size={14} className='print:w-3 print:h-3' />
-            <span>shuvo1556@gmail.com</span>
+            <a href='mailto:shuvo1556@gmail.com'>shuvo1556@gmail.com</a>
           </div>
           <div className='flex items-center gap-1'>
             <Phone size={14} className='print:w-3 print:h-3' />
-            <span>+8801777596337</span>
+            <a href='tel:+88017a7596337'>+8801777596337</a>
           </div>
           <div className='flex items-center gap-1'>
             <MapPin size={14} className='print:w-3 print:h-3' />
@@ -59,17 +59,23 @@ const ATSResume = () => {
           </div>
           <div className='flex items-center gap-1'>
             <Github size={14} className='print:w-3 print:h-3' />
-            <span>github.com/devshahoriar</span>
+            <a href='https://github.com/devshahoriar' target='_blank' rel='noopener noreferrer'>
+              github.com/devshahoriar
+            </a>
           </div>
 
           <div className='flex items-center gap-1'>
             <Globe size={14} className='print:w-3 print:h-3' />
-            <span>devshahoriar.vercel.app</span>
+            <a href='https://shahoriar.com' target='_blank' rel='noopener noreferrer'>
+              shahoriar.com
+            </a>
           </div>
 
           <div className='flex items-center gap-1'>
             <Linkedin size={14} className='print:w-3 print:h-3' />
-            <span>linkedin.com/in/devshahoriar</span>
+            <a href='https://linkedin.com/in/devshahoriar' target='_blank' rel='noopener noreferrer'>
+              linkedin.com/in/devshahoriar
+            </a>
           </div>
         </div>
       </header>
@@ -80,13 +86,14 @@ const ATSResume = () => {
           PROFESSIONAL SUMMARY
         </h2>
         <p className='text-gray-700 leading-relaxed text-justify print:text-xs print:leading-tight'>
-          Self-taught, passionate full-stack web developer with 3+ years of
+          Self-taught, passionate full-stack web developer with 5+ years of
           experience specializing in the MERN stack. Proven track record of
           building scalable applications with Node.js, Express.js, and databases
           like MongoDB, MySQL, and PostgreSQL, alongside responsive React.js
-          frontends and full-stack Next.js projects. Successfully completed full
-          web app infrastructure for three organizations, including web servers,
-          websites, and mobile apps. Skilled in IoT (Raspberry Pi, NodeMCU) and
+          frontends, React Native mobile apps, and full-stack Next.js projects.
+          Built Examo, an exam platform for Bangladeshi students and other
+          learners with leaderboards, community features, and AI assistance for
+          NCTB system questions. Skilled in IoT (Raspberry Pi, NodeMCU) and
           currently expanding expertise in cutting-edge technologies including
           AI agents, Langchain.js, vector databases, RAG (Retrieval-Augmented
           Generation), and Apache Kafka for event-driven architectures.
@@ -112,8 +119,8 @@ const ATSResume = () => {
               Frameworks & Libraries:
             </h3>
             <p className='text-gray-700 print:leading-tight'>
-              Next.js, React.js, Express.js, Expo, Hono.js (Proficient) |
-              NestJS, Gin (Knowledge)
+              Next.js, React.js, React Native, Express.js, Expo, Hono.js
+              (Proficient) | NestJS, Gin (Knowledge)
             </p>
           </div>
           <div>
@@ -177,6 +184,59 @@ const ATSResume = () => {
         <div className='mb-4 print:mb-2'>
           <div className='flex justify-between items-start mb-1'>
             <h3 className='font-bold text-black print:text-sm'>
+              CEO & Full Stack Developer
+            </h3>
+            <span className='text-sm text-gray-600 print:text-xs'>
+              2026 - Present
+            </span>
+          </div>
+          <p className='text-sm text-gray-600 mb-2 print:text-xs print:mb-1'>
+            Examo | Rajshahi, Bangladesh
+          </p>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 print:text-xs print:space-y-0 print:leading-tight'>
+            <li>
+              Built a full exam system for Bangladeshi students and other
+              learners
+            </li>
+            <li>
+              Launched leaderboards and a community feature to boost engagement
+            </li>
+            <li>
+              Developed AI assistance that can answer NCTB system questions
+            </li>
+            <li>
+              Built the platform using Node.js, Hono, React Native, TanStack,
+              and PostgreSQL
+            </li>
+          </ul>
+        </div>
+
+        <div className='mb-4 print:mb-2'>
+          <div className='flex justify-between items-start mb-1'>
+            <h3 className='font-bold text-black print:text-sm'>
+              React Native Frontend Lead
+            </h3>
+            <span className='text-sm text-gray-600 print:text-xs'>
+              2025 - Present
+            </span>
+          </div>
+          <p className='text-sm text-gray-600 mb-2 print:text-xs print:mb-1'>
+            Deshilug | Dhanmondy, Dhaka
+          </p>
+          <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 print:text-xs print:space-y-0 print:leading-tight'>
+            <li>
+              Leading frontend development for a production React Native app
+            </li>
+            <li>Shipped features for the Play Store release</li>
+            <li>
+              Owned UI architecture, performance, and code quality standards
+            </li>
+          </ul>
+        </div>
+
+        <div className='mb-4 print:mb-2'>
+          <div className='flex justify-between items-start mb-1'>
+            <h3 className='font-bold text-black print:text-sm'>
               Full Stack Developer
             </h3>
             <span className='text-sm text-gray-600 print:text-xs'>
@@ -219,7 +279,10 @@ const ATSResume = () => {
             Xemiron IT Solutions | Vodra, Rajshahi
           </p>
           <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 print:text-xs print:space-y-0 print:leading-tight'>
-            <li>Started as an intern for the first 6 months, focusing on React.js fundamentals, React Router, and React Hooks</li>
+            <li>
+              Started as an intern for the first 6 months, focusing on React.js
+              fundamentals, React Router, and React Hooks
+            </li>
             <li>
               Developed responsive web applications using modern JavaScript
               frameworks
@@ -237,8 +300,8 @@ const ATSResume = () => {
       </section>
 
       {/* Education */}
-      <section>
-        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3'>
+      <section className='print:mt-30'>
+        <h2 className='text-xl font-bold text-black border-b border-gray-300 pb-1 mb-3 print:pt-12'>
           EDUCATION
         </h2>
         <div>
@@ -363,7 +426,7 @@ const ATSResume = () => {
               Live
             </a>
           </div>
-          
+
           <p className='text-sm text-gray-600 mb-2'>
             Full-stack inventory management solution for small business
           </p>
@@ -376,8 +439,10 @@ const ATSResume = () => {
               Complete inventory management with user authentication and
               role-based access
             </li>
-            
-            <li>Features: product management, order processing, and reporting</li>
+
+            <li>
+              Features: product management, order processing, and reporting
+            </li>
             <li>Multiple branches and warehouses support</li>
           </ul>
         </div>
@@ -403,25 +468,27 @@ const ATSResume = () => {
             </a>
           </div>
           <p className='text-sm text-gray-600 mb-2'>
-            Technologies: Next.js, tRPC, Hono, Prisma, LangChain.js, Google Gemini AI, Socket.io
+            Technologies: Next.js, tRPC, Hono, Prisma, LangChain.js, Google
+            Gemini AI, Socket.io
           </p>
           <ul className='list-disc list-inside text-sm text-gray-700 space-y-1 ml-5'>
             <li>
-              Revolutionary e-commerce interface controlled entirely through natural language commands
+              Revolutionary e-commerce interface controlled entirely through
+              natural language commands
             </li>
             <li>
-              Voice-to-action functionality: "Search for gold product", "Add first product to cart"
+              Voice-to-action functionality: "Search for gold product", "Add
+              first product to cart"
             </li>
             <li>
               Real-time UI updates using Socket.io for instant user interactions
             </li>
             <li>
-              Type-safe client-server communication with tRPC and SEO-optimized SSR product pages
+              Type-safe client-server communication with tRPC and SEO-optimized
+              SSR product pages
             </li>
           </ul>
         </div>
-
-
       </section>
 
       {/* Core Competencies */}
